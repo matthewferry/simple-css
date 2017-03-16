@@ -1,0 +1,16 @@
+/*
+@define Box model
+
+@section Base
+
+@description
+The `*` selector ensures that all elements use the `border-box` box model unless
+overridden by a utility or component scoped value. This makes it easier to
+predict widths since padding and borders are included in the width.
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

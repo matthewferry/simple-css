@@ -1,0 +1,63 @@
+/*
+Button component
+
+*/
+:root {
+  --button-border-color: currentcolor;
+  --button-border-width: 1px;
+  --button-color: inherit;
+  --button-disabled-opacity: 0.6;
+  --button-font: inherit;
+  --button-padding: 0.75em 1em;
+}
+
+.button {
+  background: transparent;
+  border-color: var(--button-border-color);
+  border-style: solid;
+  border-width: var(--button-border-width);
+  color: var(--button-color); /* 2 */
+  display: inline-block;
+  font: var(--button-font); /* 3 */
+  margin: 0;
+  padding: var(--button-padding);
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none; /* 4 */
+}
+
+/**
+ * Remove excess padding and border in Firefox 4+
+ */
+
+.button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+
+.button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+/*
+UI states
+*/
+
+.button:hover,
+.button:focus,
+.button:active {
+  text-decoration: none;
+}
+
+.button:disabled,
+.button.is-disabled {
+  cursor: default;
+  opacity: var(--button-disabled-opacity);
+}

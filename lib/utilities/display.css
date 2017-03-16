@@ -1,0 +1,53 @@
+/*
+Display utilities
+
+These utilities are for hiding and showing elements to various degrees.
+
+.u-displayBlock           - Display block
+.u-displayInline          - Display inline
+.u-displayInlineBlock     - Display inline-block
+.u-displayTable           - Display as table
+.u-displayTableCell       - Display as table cell
+.u-displayTableRow        - Display as table row
+.u-displayHidden          - Remove from layout and screenreaders
+.u-displayHiddenVisually  - Remove from layout but not from screen readers
+*/
+
+.u-displayBlock {
+  display: block !important;
+}
+
+.u-displayInline {
+  display: inline !important;
+}
+
+.u-displayInlineBlock {
+  display: inline-block !important;
+  max-width: 100%; /* Limit width on images to prevent Firefox bug from displaying full size */
+}
+
+.u-displayTable {
+  display: table !important;
+}
+
+.u-displayTableCell {
+  display: table-cell !important;
+}
+
+.u-displayTableRow {
+  display: table-row !important;
+}
+
+.u-displayHidden {
+  display: none !important;
+}
+
+.u-displayHiddenVisually {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}

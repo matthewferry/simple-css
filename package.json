@@ -1,0 +1,26 @@
+{
+  "name": "css",
+  "version": "0.0.1",
+  "description": "CSS building blocks for reusable web development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Ferry",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.2",
+    "chalk": "^1.1.3",
+    "css-annotation": "^0.6.2",
+    "cssnano": "^3.10.0",
+    "cssstats": "^3.0.0",
+    "normalize.css": "^5.0.0",
+    "postcss": "^5.2.12",
+    "postcss-calc": "^5.3.1",
+    "postcss-custom-properties": "^5.0.2",
+    "postcss-import": "^9.1.0",
+    "postcss-process-comments": "^1.0.1",
+    "postcss-reporter": "^3.0.0",
+    "stylelint": "^7.8.0"
+  }
+}

@@ -1,0 +1,91 @@
+/*
+Positioning
+
+Positioning utilities allow you to set the position context for
+any element. You can also apply a zero position by using the position
+location utilities.
+*/
+
+/*
+Position locations
+
+.u-positionTop          - Set top to 0
+.u-positionRight        - Set right to 0
+.u-positionBottom       - Set bottom to 0
+.u-positionLeft         - Set left to 0
+.u-positionFit          - Fill available space in closest layout context
+.u-positionFullScreen   - Fix across the full viewport
+.u-positionFixedCenter  - Fix element in the center of viewport
+*/
+
+.u-positionTop,
+.u-positionFit,
+.u-positionFullScreen {
+  top: 0 !important;
+}
+
+.u-positionRight,
+.u-positionFit,
+.u-positionFullScreen {
+  right: 0 !important;
+}
+
+.u-positionBottom,
+.u-positionFit,
+.u-positionFullScreen {
+  bottom: 0 !important;
+}
+
+.u-positionLeft,
+.u-positionFit,
+.u-positionFullScreen  {
+  left: 0 !important;
+}
+
+/* Element will be centered to its nearest relatively-positioned ancestor. */
+.u-positionFixedCenter,
+.u-positionAbsoluteCenter {
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.u-positionFit,
+.u-positionFullScreen {
+  margin: auto !important;
+}
+
+
+/*
+Position types
+
+.u-positionStatic       - Position static
+.u-positionRelative     - Position based on its own normal value
+.u-positionAbsolute     - Position context is its first non-static parent
+.u-positionSticky       - Relative until it reaches a placement threshold where it sticks and acts like fixed position
+*/
+
+.u-positionFullScreen,
+.u-positionFixedCenter,
+.u-positionFixed {
+  backface-visibility: hidden; /* Ensure fixed elements are promoted into a new layer */
+  position: fixed !important;
+}
+
+.u-positionFit,
+.u-positionAbsoluteCenter,
+.u-positionAbsolute {
+  position: absolute !important;
+}
+
+.u-positionRelative {
+  position: relative !important;
+}
+
+.u-positionSticky {
+  position: sticky !important;
+}
+
+.u-positionStatic {
+  position: static !important;
+}

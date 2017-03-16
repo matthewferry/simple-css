@@ -1,0 +1,160 @@
+/*
+Text utilities
+
+Use these utilities for setting casing, truncation, horizontal alignment,
+word-wrapping, direction, and color.
+*/
+
+:root {
+  --text-size-large: 1.333rem;
+  --text-size-medium: var(--base-font-size);
+  --text-size-small: 0.75rem;
+}
+
+/*
+Casing
+
+.u-textCapitalize - Sentence case on elements with appropriate `display` value
+.u-textUppercase  - Uppercase
+.u-textLowercase  - Lowercase
+*/
+
+.u-textCapitalize::first-letter {
+  text-transform: capitalize !important;
+}
+
+.u-textUppercase {
+  text-transform: uppercase !important;
+}
+
+.u-textLowercase {
+  text-transform: lowercase !important;
+}
+
+
+/*
+Truncation
+
+Add this class to any block of text prevent wrapping and add an ellipsis at
+the end of the block when text overflows past the parent container width.
+*/
+
+.u-textTruncate {
+  max-width: 100%; /* Ensure that the node has a maximum width */
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important; /* Ensure wrap isn't inherited */
+}
+
+
+/*
+Alignment
+
+Set alignment for all sizes or override at specific viewport sizes.
+
+.u-textCenter - Centered
+.u-textLeft   - Left
+.u-textRight  - Right
+*/
+
+.u-textCenter {
+  text-align: center !important;
+}
+
+.u-textLeft {
+  text-align: left !important;
+}
+
+.u-textRight {
+  text-align: right !important;
+}
+
+
+/*
+Word-wrapping
+
+Use these class names to change text block word wrapping behavior.
+
+.u-textBreak  - Force-wrap long strings
+.u-textNoWrap - Force string to one line
+*/
+
+.u-textBreak {
+  word-break: break-word !important; /* For webkit */
+  word-wrap: break-word !important;
+}
+
+.u-textNoWrap {
+ white-space: nowrap !important;
+}
+
+
+/*
+Direction
+
+Use these class names when an override on text direction is necessary. Usage
+of these classes should be minimal and only if the implications of modifying
+the text direction are fully thought-through. You can use either a utility
+class, the html attribute `dir`, or the html tag `<bdo>`.
+
+.u-textLeftToRight - Sets new context for text to run LTR in RTL parent context
+.u-textRightToLeft - Sets new context for text to run RTL in LTR parent context
+*/
+
+.u-textLeftToRight {
+  direction: ltr !important;
+  unicode-bidi: embed;
+  text-align: start;
+}
+
+.u-textRightToLeft {
+  direction: rtl !important;
+  unicode-bidi: embed;
+  text-align: start;
+}
+
+
+/*
+Colors
+
+.u-textInheritColor - Inherit from parent
+.u-textDefaultColor - Black
+.u-textSubtleColor  - Very subtle
+*/
+
+.u-textInheritColor {
+  color: inherit !important;
+}
+
+.u-textDefaultColor {
+  color: @black !important;
+}
+
+.u-textSubtleColor {
+  color: @type-weak-color !important;
+}
+
+/*
+Size
+
+.u-textLarge  - Large
+.u-textMedium - Medium (default size)
+.u-textSmall  - Small
+
+*/
+/* Large */
+.u-textLarge {
+  font-size: var(--text-size-large) !important;
+}
+
+/* Base size */
+.u-textMedium {
+  font-size: var(--text-size-medium) !important;
+}
+
+/* Small */
+small,
+.u-textSmall {
+  font-size: var(--text-size-small) !important;
+}

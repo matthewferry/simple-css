@@ -1,0 +1,56 @@
+/*
+Fade (opacity) utilities
+
+Fade applies opacity to an element. Values range from 10-100.
+
+.u-fadeBy100 - Fade by 100
+.u-fadeBy90  - Fade by 90
+.u-fadeBy80  - Fade by 80
+.u-fadeBy70  - Fade by 70
+.u-fadeBy60  - Fade by 60
+.u-fadeBy50  - Fade by 50
+.u-fadeBy40  - Fade by 40
+.u-fadeBy30  - Fade by 30
+.u-fadeBy20  - Fade by 20
+.u-fadeBy10  - Fade by 10
+*/
+
+.u-fadeBy100 {
+  opacity: 0 !important;
+}
+
+.u-fadeBy90 {
+  opacity: 0.1 !important;
+}
+
+.u-fadeBy80 {
+  opacity: 0.2 !important;
+}
+
+.u-fadeBy70 {
+  opacity: 0.3 !important;
+}
+
+.u-fadeBy60 {
+  opacity: 0.4 !important;
+}
+
+.u-fadeBy50 {
+  opacity: 0.5 !important;
+}
+
+.u-fadeBy40 {
+  opacity: 0.6 !important;
+}
+
+.u-fadeBy30 {
+  opacity: 0.7 !important;
+}
+
+.u-fadeBy20 {
+  opacity: 0.8 !important;
+}
+
+.u-fadeBy10 {
+  opacity: 0.9 !important;
+}

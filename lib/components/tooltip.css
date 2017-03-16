@@ -1,0 +1,319 @@
+/*
+Tooltips
+
+Tooltips are a way to display contextual information to users about a specific
+UI element. They should be succinct and used sparingly in cases where it's not
+possible to display the needed contextual information or in cases where
+context is supplementary. By default, they are limited to one line of text.
+For use-cases needing more than one line of text, please see the
+[tooltip sizing modifiers](#components-tooltips-sizes).
+
+Warning:
+###### Mobile devices do not have `:hover` states
+Tooltips use `:hover` and `:focus` on their target element to reveal the
+tooltip. Mobile devices do not have hover states. Tapping the target will
+trigger `:focus`, however, so it is not advised to use tooltips on buttons
+or anchors that have actions that may prevent the user from seeing the
+tooltip.
+
+Markup:
+<span>Do this thing</span>
+<button class="tooltip {{modifier_class}}" aria-label="thing, noun | \'thiŋ\, a spacial entity">
+  <span class="symbol symbol-info symbol-compact"></span>
+</button>
+*/
+:root {
+  --tooltip-font-color: white;
+  --tooltip-font-size: 12.8px;
+  --tooltip-caret-size: 6px;
+  --tooltip-border-radius: 3px;
+  --tooltip-background-color: black;
+  --tooltip-zindex: 1000;
+  --tooltip-vertical-padding: 0.5em;
+  --tooltip-horizontal-padding: 1em;
+  --tooltip-offset-from-element: 3px;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip::before,
+.tooltip::after,
+.tooltip::before,
+.tooltip::after {
+  bottom: 100%;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.2s ease-out;
+  z-index: var(--tooltip-zindex);
+}
+
+.tooltip::before {
+  background: var(--tooltip-background-color);
+  border-radius: var(--tooltip-border-radius);
+  color: var(--tooltip-font-color);
+  content: attr(aria-label);
+  font-size: var(--tooltip-font-size);
+  line-height: normal;
+  margin-bottom: calc(var(--tooltip-offset-from-element) + var(--tooltip-caret-size));
+  padding: var(--tooltip-vertical-padding) var(--tooltip-horizontal-padding);
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+}
+
+.tooltip::after {
+  content: "";
+  margin-left: calc(-1 * var(--tooltip-caret-size));
+  border-width: var(--tooltip-caret-size) var(--tooltip-caret-size) 0;
+  border-style: solid;
+  border-color: var(--tooltip-background-color) transparent;
+  margin-bottom: var(--tooltip-offset-from-element);
+}
+
+.tooltip:hover::before,
+.tooltip:focus::before,
+.tooltip:hover::after,
+.tooltip:focus::after {
+  opacity: 1;
+}
+
+/*
+Tooltip alignment
+
+Sometimes the element with a tooltip will be flush against the left or right
+of the window. Centering the tooltip could cause issues where the tooltip
+renders off the screen. In these cases, you'll want to align the tooltip with
+the element by aligning on the left or right side of the element.
+
+Warning:
+###### Cannot combine with `.tooltip-before` and `.tooltip-after`
+`.tooltip-before` and `.tooltip-after` will override the the alignment
+modifiers since they are already forcing the left and right values of the
+tooltip to appear before or after their targets.
+
+Markup:
+<div class="txt-l">
+  <div>
+    <span>Tooltips can be aligned left, above.</span>
+    <button class="tooltip tooltip-align-l" aria-label="left, adjective | \left\, located to the west of a subject facing north">
+      <span class="symbol symbol-info symbol-compact"></span>
+    </button>
+  </div>
+  <div>
+    <span>Tooltips can be aligned left, below.</span>
+    <button class="tooltip tooltip-below tooltip-align-l" aria-label="left, adjective | \left\, located to the west of a subject facing north">
+      <span class="symbol symbol-info symbol-compact"></span>
+    </button>
+  </div>
+</div>
+<div class="txt-r">
+  <div>
+    <span>Tooltips can be aligned right, above.</span>
+    <button class="tooltip tooltip-align-r" aria-label="right, adjective | \rahy\, located to the east of a subject facing north">
+      <span class="symbol symbol-info symbol-compact"></span>
+    </button>
+  </div>
+  <div>
+    <span>Tooltips can be aligned right, below.</span>
+    <button class="tooltip tooltip-below tooltip-align-r" aria-label="right, adjective | \rahy\, located to the east of a subject facing north">
+      <span class="symbol symbol-info symbol-compact"></span>
+    </button>
+  </div>
+</div>
+*/
+.tooltip-alignLeft::before,
+.tooltip-alignRight::before {
+  transform: translate(0, 0);
+}
+
+.tooltip-alignLeft::before {
+  left: calc(-1 * var(--tooltip-horizontal-padding));
+}
+
+.tooltip-alignRight::before {
+  left: auto;
+  right: calc(-1 * var(--tooltip-horizontal-padding));
+}
+
+
+
+/*
+Tooltip positioning
+
+Tooltips can be displayed on top of, after, below, or before their target
+element. This can be helpful if you want to esure the tooltip doesn't cover
+important information.
+
+Markup:
+<div>
+  <button class="btn tooltip tooltip-after" aria-label="You got it, dude.">
+    Show tooltip after
+  </button>
+</div>
+<div class="txt-c">
+  <button class="btn tooltip tooltip-below" aria-label="You got it, dude.">
+    Show tooltip below
+  </button>
+</div>
+<div class="txt-r">
+  <button class="btn tooltip tooltip-before" aria-label="You got it, dude.">
+    Show tooltip before
+  </button>
+</div>
+*/
+
+.tooltip-positionAfter::before,
+.tooltip-positionAfter::after {
+  left: 100%;
+}
+
+.tooltip-positionAfter::before {
+  margin-left: calc(var(--tooltip-offset-from-element) + var(--tooltip-caret-size));
+}
+
+.tooltip-positionAfter::after {
+  border-left-width: 0;
+  margin-left: var(--tooltip-offset-from-element);
+}
+
+/* Position below element */
+.tooltip-positionBelow::before,
+.tooltip-positionBelow::after {
+  top: 100%;
+}
+
+.tooltip-positionBelow::before {
+  margin-top: calc(var(--tooltip-offset-from-element) + var(--tooltip-caret-size));
+}
+
+.tooltip-positionBelow::after {
+  border-top-width: 0;
+  border-bottom-width: var(--tooltip-caret-size);
+  margin-top: var(--tooltip-offset-from-element);
+}
+
+/* Position before element */
+.tooltip-positionBefore::before,
+.tooltip-positionBefore::after {
+  left: auto;
+  right: 100%;
+}
+
+.tooltip-positionBefore::before {
+  margin-right: calc(var(--tooltip-offset-from-element) + var(--tooltip-caret-size));
+}
+
+.tooltip-positionBefore::after {
+  border-right-width: 0;
+  margin-left: 0;
+  margin-right: var(--tooltip-offset-from-element);
+}
+
+/* Positioning modifiers shared properties */
+.tooltip-positionAfter::before,
+.tooltip-positionAfter::after,
+.tooltip-positionBefore::before,
+.tooltip-positionBefore::after,
+.tooltip-positionBelow::before,
+.tooltip-positionBelow::after {
+  bottom: auto;
+}
+
+.tooltip-positionAfter::before,
+.tooltip-positionAfter::after,
+.tooltip-positionBefore::before,
+.tooltip-positionBefore::after {
+  top:50%;
+}
+
+.tooltip-positionAfter::before,
+.tooltip-positionBefore::before,
+.tooltip-positionBelow::after {
+  margin-bottom: 0;
+}
+
+.tooltip-positionAfter::before,
+.tooltip-positionBefore::before {
+  transform: translate(0, -50%); /* Pull before/after modifiers up 50% of their height */
+}
+
+.tooltip-positionAfter::after,
+.tooltip-positionBefore::after {
+  margin-top: calc(-1 * var(--tooltip-caret-size));
+  border-color: transparent var(--tooltip-background-color);
+  border-bottom-width: var(--tooltip-caret-size);
+}
+
+/*
+Tooltip sizes
+
+The default tooltips are limited to one line to encourage concise context.
+However, in some cases, wrapping the text is desirable. To wrap the text, a
+width needs to be declared on the tooltip. There are four sizes to choose
+from: small, medium, large, and full-width.
+
+Markup:
+<div class="mbs">
+  <button class="btn tooltip tooltip-s"
+    aria-label="It's a world of laughter, a world of tears;
+    From time to time, the clouds give rest to the moon beholders">
+    <span>Small tooltip</span>
+  </button>
+</div>
+<div class="mvs">
+  <button class="btn tooltip tooltip-m"
+    aria-label="It's a world of laughter, a world of tears;
+    From time to time, the clouds give rest to the moon beholders">
+    <span>Medium tooltip</span>
+  </button>
+</div>
+<div class="mvs">
+  <button class="btn tooltip tooltip-l"
+    aria-label="It's a world of laughter, a world of tears;
+    From time to time, the clouds give rest to the moon beholders">
+    <span>Large tooltip</span>
+  </button>
+</div>
+<div class="mts">
+  <button class="btn tooltip tooltip-full"
+    aria-label="It's a world of laughter, a world of tears;
+    From time to time, the clouds give rest to the moon beholders">
+    <span>Tooltips can also be full-width</span>
+  </button>
+</div>
+*/
+
+.tooltip-sizeSmall::before,
+.tooltip-sizeMedium::before,
+.tooltip-sizeLarge::before,
+.tooltip-sizeFull::before {
+  white-space: normal;
+  text-align: left;
+}
+
+.tooltip-sizeSmall::before {
+  width: 10em;
+}
+
+.tooltip-sizeMedium::before {
+  width: 15em;
+}
+
+.tooltip-sizeLarge::before {
+  width: 20em;
+}
+
+.tooltip-sizeFull::before {
+  width: 100%;
+}
+
+@media (max-width: 320px) {
+  .tooltip-sizeSmall::before,
+  .tooltip-sizeMedium::before,
+  .tooltip-sizeLarge::before {
+    max-width: 90vw;
+  }
+}

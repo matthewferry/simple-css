@@ -1,0 +1,26 @@
+/*
+Vertical alignment utilities
+
+Vertically align elements that have an appropriate `display` value.
+
+.u-alignBaseline  - Align baseline
+.u-alignBottom    - Align bottom
+.u-alignMiddle    - Align middle
+.u-alignTop       - Align top
+*/
+
+.u-alignBaseline {
+  vertical-align: baseline !important;
+}
+
+.u-alignBottom {
+  vertical-align: bottom !important;
+}
+
+.u-alignMiddle {
+  vertical-align: middle !important;
+}
+
+.u-alignTop {
+  vertical-align: top !important;
+}

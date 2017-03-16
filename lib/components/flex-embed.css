@@ -1,0 +1,105 @@
+/*
+Flex embed
+
+Flex embed allows responsive images and video to maintain their aspect ratio
+at any screen resolution size. The aspect-ratio hack is applied to an empty
+element because it allows the component to respect `max-height`. The default
+ratio uses 100% padding for a 1:1 aspect ratio. Use the aspect ratio modifiers
+for non-square embeds.
+
+Markup:
+<div class="flexEmbed">
+  <div class="flexEmbed_ratio {{modifier_class}}"></div>
+  <div class="flexEmbed-content">
+    <img src="http://placeimg.com/1000/1000/arch" />
+  </div>
+</div>
+
+.flexEmbed_ratio-4x1    - 4:1 aspect ratio
+.flexEmbed_ratio-3x1    - 3:1 aspect ratio
+.flexEmbed_ratio-2x1    - 2:1 aspect ratio
+.flexEmbed_ratio-16x9   - 16:9 aspect ratio
+.flexEmbed_ratio-4x3    - 4:3 aspect ratio
+.flexEmbed_ratio-cinema - 2.35:1 aspect ratio
+
+Style guideComponents - Flex embed
+*/
+
+.flexEmbed {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.flexEmbed_ratio {
+  display: block;
+  padding-bottom: 100%;
+  width: 100%;
+}
+
+.flexEmbed_ratio-4x1 {
+  padding-bottom: 25%;
+}
+
+.flexEmbed_ratio-3x1 {
+  padding-bottom: calc(100% / 3);
+}
+
+.flexEmbed_ratio-2x1 {
+  padding-bottom: 50%;
+}
+
+.flexEmbed_ratio-16x9 {
+  padding-bottom: 56.25%;
+}
+
+.flexEmbed_ratio-4x3 {
+  padding-bottom: 75%;
+}
+
+.flexEmbed_ratio-cinema {
+  padding-bottom: calc(100% / 2.35);
+}
+
+/* Fit the content to the aspect ratio */
+.flexEmbed_content,
+.flexEmbed_content iframe,
+.flexEmbed_content embed,
+.flexEmbed_content object,
+.flexEmbed_content video {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+
+/*
+Flex embed cover images
+
+You can use the cover-image modifier to maintain aspect ratio for cases where
+you may need the image to be used as background.
+
+Markup:
+<div class="flexEmbed flexEmbed-cover-image" style="background-image: url('http://placeimg.com/1000/1000/arch')">
+  <div class="flexEmbed_ratio flexEmbed-16x9 bg-brand type-faded"></div>
+  <div class="flexEmbed-content">
+    <div class="position-middle">
+      <div class="position-middle-item">
+        <h1 class="type-brighter">Hello world</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+Style guideComponents - Flex embed - Cover images
+*/
+
+.flexEmbed-cover-image {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}

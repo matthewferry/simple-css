@@ -1,0 +1,18 @@
+/*
+Link utilities
+
+TODO default link styles
+*/
+
+a,
+.u-link {
+  text-decoration: underline !important;
+}
+
+.u-linkBlock,
+.u-linkBlock:hover,
+.u-linkBlock:focus,
+.u-linkBlock:active {
+  display: block !important;
+  text-decoration: none !important;
+}

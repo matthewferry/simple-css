@@ -1,0 +1,89 @@
+/*
+Grid
+
+No explicit widths are set by default on grid cells. Rely on combining
+`grid-cell` with a dimension utility or a component class that extends 'Grid'.
+*/
+
+:root {
+  --grid-gutter-size: var(--base-spacing-unit);
+}
+
+.grid {
+  box-sizing: border-box;
+  display: flex; /* Set display to flex */
+  flex-flow: row wrap;
+  margin: 0; /* Reset margins on elements with defaults */
+  padding: 0; /* Reset padding on elements with defaults */
+}
+
+.grid_cell {
+  box-sizing: inherit;
+  flex-basis: 100%; /* Set flex items to full width by default */
+  min-width: 0; /* Fix issue where elements with overflow extend past the `grid-cell` container */
+}
+
+/*
+Horizontally center one unit
+Set a specific unit to be horizontally centered. Doesn't affect
+any other units. Can still contain a child `Grid` object.
+*/
+.grid_cell-center {
+  margin: 0 auto;
+}
+
+/*
+Align cells
+
+.grid-alignCenter
+.grid-alignRight
+.grid-alignMiddle
+.grid-alignBottom
+*/
+
+.grid-alignCenter {
+  justify-content: center;
+}
+
+.grid-alignRight {
+  justify-content: flex-end;
+}
+
+.grid-alignMiddle {
+  align-items: center;
+}
+
+.grid-alignBottom {
+  align-items: flex-end;
+}
+
+
+/*
+Distribute cells
+
+Horizontally and vertically distribute cells.
+
+.grid-fit         - Make all cells equal widths
+.grid-equalHeight - Make all cells equal height
+*/
+.grid-fit > .grid_cell {
+  flex: 1 1 0%; /* Use all shorthand values to fix IE10 bug and use 0% to avoid IE11 unitless bug */
+}
+
+.grid-equalHeight > .grid_cell {
+  display: flex;
+}
+
+/*
+Gutters
+
+.grid-withGutter - Provides gutter around `grid_cell`
+*/
+
+.grid-withGutter {
+  margin: 0 calc(-0.5 * var(--grid-gutter-size));
+}
+
+.grid-withGutter > .grid_cell {
+  padding: 0 calc(0.5 * var(--grid-gutter-size));
+}

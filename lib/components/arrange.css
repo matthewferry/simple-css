@@ -1,0 +1,100 @@
+/*
+Arrange objects
+
+The arrange component allows you to get some of the benefits of flexbox, such
+that you can display items in a row of cells that adhere to its width or take up
+available space. You can also control the vertical alignment.
+
+Markup:
+<div class="arrange {{modifier_class}}">
+  <div class="arrange_sizeFit">
+    <img src="http://placeimg.com/44/44/animals" />
+  </div>
+  <div class="arrange_sizeFill">
+    <span>Rickity the Field Mouse</span>
+  </div>
+  <div class="arrange_sizeFit">
+    <img src="http://placeimg.com/44/44/animals" />
+  </div>
+</div>
+
+.arrange-top         - Align the expanded section to the top
+.arrange-middle      - Align the expanded section to the middle
+.arrange-bottom      - Align the expanded section to the bottom
+.arrange-equal       - Give each cell equal size
+.arrange-withGutter  - Give contents padding like traditional media object
+*/
+
+:root {
+  --arrange-gutter-size: 10px;
+}
+
+.arrange {
+  box-sizing: border-box; /* 1 */
+  display: table; /* Rely on table layout */
+  margin: 0; /* Reset the default margins, e.g. `ul` */
+  min-width: 100%; /* Fill the full-width of parent context */
+  padding: 0; /* Reset the default padding, e.g. `ul` */
+  table-layout: auto; /* Reset layout to enable nesting */
+}
+
+.arrange_sizeFill,
+.arrange_sizeFit {
+  display: table-cell;
+  padding: 0; /* Reset the default padding, e.g. `li` */
+  vertical-align: top; /* Default alignment to top */
+}
+
+.arrange_sizeFill {
+  width: 100%;
+}
+
+/*
+Where possible, protect against large images breaking the layout. Prevent them from
+exceeding the width of the main content block by making them fluid.
+*/
+.arrange_sizeFill img {
+  height: auto;
+  max-width: 100%;
+}
+
+/*
+Defend against a side-effect of this layout pattern: images in 'arrange-sizeFit'
+cannot be fluid, otherwise they lose their ability to provide size to a cell.
+*/
+.arrange_sizeFit img {
+  max-width: none !important;
+  width: auto !important;
+}
+
+/* Vertical alignment modifiers */
+.arrange-middle > .arrange_sizeFill,
+.arrange-middle > .arrange_sizeFit {
+  vertical-align: middle;
+}
+
+.arrange-bottom > .arrange_sizeFill,
+.arrange-bottom > .arrange_sizeFit {
+  vertical-align: bottom;
+}
+
+/* Equal-width modifier */
+.arrange-equal {
+  table-layout: fixed;
+  width: 100%; /* Set width to calculate table cell width */
+}
+
+.arrange-equal > .arrange_sizeFill,
+.arrange-equal > .arrange_sizeFit {
+  width: 1%; /* Ensure the cells have an equal width. */
+}
+
+/* Gutter modifier */
+.arrange-withGutter {
+  margin: 0 calc(-0.5 * var(--arrange-gutter-size));
+}
+
+.arrange-withGutter > .arrange_sizeFit,
+.arrange-withGutter > .arrange_sizeFill {
+  padding: 0 calc(0.5 * var(--arrange-gutter-size));
+}
