@@ -8,7 +8,7 @@ Button component
   --button-color: inherit;
   --button-disabled-opacity: 0.6;
   --button-font: inherit;
-  --button-padding: 0.75em 1em;
+  --button-padding: 0.75em 1.25em;
 }
 
 .button {
@@ -19,6 +19,7 @@ Button component
   color: var(--button-color); /* 2 */
   display: inline-block;
   font: var(--button-font); /* 3 */
+  line-height: normal; /* Ensures that inheritance from font doesn't conflict */
   margin: 0;
   padding: var(--button-padding);
   position: relative;

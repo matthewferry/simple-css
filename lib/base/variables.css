@@ -5,9 +5,10 @@
 */
 
 :root {
+  --root-font-size: 75%;
   --base-font-family: "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
-  --base-font-size: 1rem;
-  --base-font-scale: 1.333;
-  --base-spacing-rhythm: 1.5;
-  --base-spacing-unit: calc(var(--base-font-size) * var(--base-spacing-rhythm));
+  --base-font-size: 1.3333333333333333rem;
+  --base-spacing-unit: 2rem;
+
+  --color-brown-medium: #E4E0D4; 
 }

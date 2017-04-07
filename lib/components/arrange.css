@@ -26,7 +26,7 @@ Markup:
 */
 
 :root {
-  --arrange-gutter-size: 10px;
+  --arrange-gutter-size: var(--base-spacing-);
 }
 
 .arrange {

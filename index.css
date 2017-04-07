@@ -47,5 +47,6 @@ included in the HTML in addition to the base component class.
 @import "lib/components/button.css";
 @import "lib/components/flex-embed.css";
 @import "lib/components/grid.css";
+@import "lib/components/rule.css";
 @import "lib/components/tooltip.css";
 @import "lib/components/truncate.css";

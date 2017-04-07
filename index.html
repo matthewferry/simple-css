@@ -3,134 +3,142 @@
   <meta charset="utf-8">
   <title>Test components</title>
   <link href="dist/index.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="http://basehold.it/24">
+  <!-- <link rel="stylesheet" href="http://basehold.it/12"> -->
   <meta name="viewport" content="initial-scale=1">
+  <style>
+    body, h5, h6 { color: #3E5D7C; font-family: "Lato", sans-serif; }
+    h5, h6 { font-weight: bold; }
+    h1, h2, h3, h4 { font-family: "Arvo", serif; font-weight: normal; }
+    h1, h2, h3, h4, h5, h6 { color: #102441; }
+    h5 { color: #ED4E29; }
+
+    .baselineGrid {
+      background-image: -webkit-linear-gradient(top, #AFF9F7 0, rgba(255, 255, 255, 0)1px);
+      background-image: -moz-linear-gradient(top, #AFF9F7 0, rgba(255, 255, 255, 0)1px);
+      background-image: -o-linear-gradient(top, #AFF9F7 0, rgba(255, 255, 255, 0)1px);
+      background-image: linear-gradient(to bottom, #AFF9F7 0, rgba(255, 255, 255, 0)1px);
+      background-repeat: repeat-y;
+      background-size: 100% 1rem;
+    }
+  </style>
 </head>
-<body style="padding: 4.5rem;">
-  <article class="grid grid-withGutter">
-    <section class="grid_cell u-size2of3">
-      <h1>The weather is amazing.</h1>
-      <p>
-        The weather is amazing, walk with me through the pathway of more
-        success. Take this journey with me, Lion! We the best. Congratulations,
-        you played yourself. Mogul talk. Surround yourself with angels. You see
-        that bamboo behind me though, you see that bamboo? Ain’t nothin’ like
-        bamboo. Bless up. Let’s see what Chef Dee got that they don’t want us to
-        eat. Fan luv. They will try to close the door on you, just open it.
-        Learning is cool, but knowing is better, and I know the key to success.
+<body class="baselineGrid" style="padding: 5rem;">
+  <a class="u-displayBlock u-textMedium u-textSubtleColor" href="#" onClick="document.body.classList.toggle('baselineGrid');this.classList.toggle('u-fadeBy50');">
+    Toggle grid
+  </a>
+  <article style="padding: 0 20rem;">
+    <header style="padding-bottom: 2rem;">
+      <h5>Typography</h5>
+      <h1>Heading 1 is for page titles</h1>
+      <p class="u-textLarge">
+        Large body copy can be paired with page or section headings to give
+        supporting context or supplementary information, when long-form body copy isn't necessary.
       </p>
-      <h2>The weather is amazing, walk with me through the pathway of more success.</h2>
+    </header>
+    <section>
+      <h2>
+        Heading 2 is for headings that read as sentences such as in marketing
+        pages
+      </h2>
+      <div class="grid grid-withGutter">
+        <div class="grid_cell u-size1of3">
+          <h6>Heading 6 is for small headings</h6>
+          <p class="u-textSmall">
+            Alice was beginning to get very tired of sitting by her sister on the
+            bank, and of having nothing to do: once or twice she had peeped into the
+            book her sister was reading, but it had no pictures or conversations in
+            it, ‘and what is the use of a book,’ thought Alice ‘without pictures or
+            conversations?’
+          </p>
+        </div>
+        <div class="grid_cell u-size1of3">
+          <h6>Goes well in multi-column contexts</h6>
+          <p class="u-textSmall">
+            So she was considering in her own mind (as well as she could, for the
+            hot day made her feel very sleepy and stupid), whether the pleasure
+            of making a daisy-chain would be worth the trouble of getting up and
+            picking the daisies, when suddenly a White Rabbit with pink eyes ran
+            close by her.
+          </p>
+        </div>
+        <div class="grid_cell u-size1of3">
+          <h6>Such as feature callouts</h6>
+          <p class="u-textSmall">
+            There was nothing so VERY remarkable in that; nor did Alice think it so
+            VERY much out of the way to hear the Rabbit say to itself, ‘Oh dear!
+            Oh dear! I shall be late!’ (when she thought it over afterwards, it
+            occurred to her that she ought to have wondered at this, but at the time
+            it all seemed quite natural)
+          </p>
+        </div>
+      </div>
+      <h3>Heading 3 is to separate page sections</h4>
       <p>
-        Put it this way, it took me twenty five years to get these plants,
-        twenty five years of blood sweat and tears, and I’m never giving up, I’m
-        just getting started. The weather is amazing, walk with me through the
-        pathway of more success. Take this journey with me, Lion! Fan luv. We
-        the best. It’s important to use cocoa butter. It’s the key to more
-        success, why not live smooth? Why live rough? Cloth talk.
+        Either the well was very deep, or she fell very slowly, for she had
+        plenty of time as she went down to look about her and to wonder what was
+        going to happen next. First, she tried to look down and make out what
+        she was coming to, but it was too dark to see anything; then she
+        looked at the sides of the well, and noticed that they were filled with
+        cupboards and book-shelves; here and there she saw maps and pictures
+        hung upon pegs. She took down a jar from one of the shelves as
+        she passed; it was labelled ‘ORANGE MARMALADE’, but to her great
+        disappointment it was empty: she did not like to drop the jar for fear
+        of killing somebody, so managed to put it into one of the cupboards as
+        she fell past it.
       </p>
-      <h3>The weather is amazing, walk with me through the pathway of more success. Cocoa butter is the key.</h3>
-      <p>
-        The weather is amazing, walk with me through the pathway of more
-        success. Take this journey with me, Lion! We the best. Congratulations,
-        you played yourself. Mogul talk. Surround yourself with angels. You see
-        that bamboo behind me though, you see that bamboo? Ain’t nothin’ like
-        bamboo. Bless up. Let’s see what Chef Dee got that they don’t want us to
-        eat. Fan luv. They will try to close the door on you, just open it.
-        Learning is cool, but knowing is better, and I know the key to success.
+      <div class="grid grid-withGutter" style="padding: 3rem 0 15rem;">
+        <div class="grid_cell u-size2of3">
+          <h4>Heading 4 is for atomic unit headings</h5>
+          <p>
+            List item context can be a paragraph of supporting content or a
+            simple set of metadata about the list item.
+          </p>
+          <hr style="padding-bottom: 0;"/>
+          <h4>These headings are good for repeated use</h5>
+          <p>
+            List item context can be a paragraph of supporting content or a
+            simple set of metadata about the list item.
+          </p>
+          <hr style="padding-bottom: 0;"/>
+          <h4>These headings are good for repeated use</h5>
+          <p>
+            List item context can be a paragraph of supporting content or a
+            simple set of metadata about the list item.
+          </p>
+        </div>
+        <div class="grid_cell u-size1of3" style="margin-top:2rem;">
+          <h6>Sidebar</h6>
+          <small>
+            Some multi-line context that helps clarify what this sidebar is for.
+          </small>
+        </div>
+      </div>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+      <p class="u-textSmall">
+        Alice was beginning to get very tired of sitting by her sister on the
+        bank, and of having nothing to do: once or twice she had peeped into the
+        book her sister was reading, but it had no pictures or conversations in
+        it, ‘and what is the use of a book,’ thought Alice ‘without pictures or
+        conversations?’
       </p>
-      <h4>The weather is amazing, walk with me through the pathway of more success. Cocoa butter is the key. Every chance
-      I get, I water the plants, Lion!</h4>
-      <p>
-        Put it this way, it took me twenty five years to get these plants,
-        twenty five years of blood sweat and tears, and I’m never giving up, I’m
-        just getting started. The weather is amazing, walk with me through the
-        pathway of more success. Take this journey with me, Lion! Fan luv. We
-        the best. It’s important to use cocoa butter. It’s the key to more
-        success, why not live smooth? Why live rough? Cloth talk.
+      <p class="u-textMedium">
+        Alice was beginning to get very tired of sitting by her sister on the
+        bank, and of having nothing to do: once or twice she had peeped into the
+        book her sister was reading, but it had no pictures or conversations in
+        it, ‘and what is the use of a book,’ thought Alice ‘without pictures or
+        conversations?’
       </p>
-      <p>
-        The weather is amazing, walk with me through the pathway of more
-        success. Take this journey with me, Lion! We the best. Congratulations,
-        you played yourself. Mogul talk. Surround yourself with angels. You see
-        that bamboo behind me though, you see that bamboo? Ain’t nothin’ like
-        bamboo. Bless up. Let’s see what Chef Dee got that they don’t want us to
-        eat. Fan luv. They will try to close the door on you, just open it.
-        Learning is cool, but knowing is better, and I know the key to success.
-      </p>
-      <h5>I’m up to something.</h5>
-      <h6>The weather is amazing, walk with me through the pathway of more success. Cocoa butter is the key. Every chance
-      I get, I water the plants, Lion! Eliptical talk.</h6>
-      <p>
-        Watch your back, but more importantly when you get out the shower, dry
-        your back, it’s a cold world out there.To be successful you’ve got to
-        work hard, to make history, simple, you’ve got to make it. Every chance
-        I get, I water the plants, Lion! Eliptical talk. To be successful you’ve
-        got to work hard, to make history, simple, you’ve got to make it. The
-        key to more success is to get a massage once a week, very important,
-        major key, cloth talk. The first of the month is coming, we have to get
-        money, we have no choice. It cost money to eat and they don’t want you
-        to eat. You do know, you do know that they don’t want you to have lunch.
-        I’m keeping it real with you, so what you going do is have lunch.
-      </p>
-      <p>
-        The weather is amazing, walk with me through the pathway of more
-        success. Take this journey with me, Lion! We the best. Congratulations,
-        you played yourself. Mogul talk. Surround yourself with angels. You see
-        that bamboo behind me though, you see that bamboo? Ain’t nothin’ like
-        bamboo. Bless up. Let’s see what Chef Dee got that they don’t want us to
-        eat. Fan luv. They will try to close the door on you, just open it.
-        Learning is cool, but knowing is better, and I know the key to success.
-      </p>
-      <img class="u-fadeBy10" src="http://placeimg.com/100/100/animals" />
-      <img class="u-fadeBy20" src="http://placeimg.com/100/100/animals" />
-      <img class="u-fadeBy30" src="http://placeimg.com/100/100/animals" />
-      <img class="u-fadeBy40" src="http://placeimg.com/100/100/animals" />
-      <img class="u-fadeBy50" src="http://placeimg.com/100/100/animals" />
-      <img class="u-fadeBy60" src="http://placeimg.com/100/100/animals" />
-      <img class="u-fadeBy70" src="http://placeimg.com/100/100/animals" />
-      <img class="u-fadeBy80" src="http://placeimg.com/100/100/animals" />
-      <img class="u-fadeBy90" src="http://placeimg.com/100/100/animals" />
-      <img class="u-fadeBy100" src="http://placeimg.com/100/100/animals" />
-    </section>
-    <section class="grid_cell u-size1of3">
-      <p>
-        Hammock talk come soon. Congratulations, you played yourself. Fan luv.
-        Surround yourself with angels. Let’s see what Chef Dee got that they
-        don’t want us to eat. Major key, don’t fall for the trap, stay focused.
-        It’s the ones closest to you that want to see you fail. Major key, don’t
-        fall for the trap, stay focused. It’s the ones closest to you that want
-        to see you fail. The key to success is to keep your head above the
-        water, never give up. A major key, never panic. Don’t panic, when it
-        gets crazy and rough, don’t panic, stay calm.
-      </p>
-      <p>
-        The weather is amazing, walk with me through the pathway of more
-        success. Take this journey with me, Lion! We the best. Congratulations,
-        you played yourself. Mogul talk. Surround yourself with angels. You see
-        that bamboo behind me though, you see that bamboo? Ain’t nothin’ like
-        bamboo. Bless up. Let’s see what Chef Dee got that they don’t want us to
-        eat. Fan luv. They will try to close the door on you, just open it.
-        Learning is cool, but knowing is better, and I know the key to success.
-      </p>
-      <h4>A major key, never panic.</h4>
-      <p>
-        The weather is amazing, walk with me through the pathway of more
-        success. Take this journey with me, Lion! We the best. Congratulations,
-        you played yourself. Mogul talk. Surround yourself with angels. You see
-        that bamboo behind me though, you see that bamboo? Ain’t nothin’ like
-        bamboo. Bless up. Let’s see what Chef Dee got that they don’t want us to
-        eat. Fan luv. They will try to close the door on you, just open it.
-        Learning is cool, but knowing is better, and I know the key to success.
-      </p>
-      <p>
-        Hammock talk come soon. Congratulations, you played yourself. Fan luv.
-        Surround yourself with angels. Let’s see what Chef Dee got that they
-        don’t want us to eat. Major key, don’t fall for the trap, stay focused.
-        It’s the ones closest to you that want to see you fail. Major key, don’t
-        fall for the trap, stay focused. It’s the ones closest to you that want
-        to see you fail. The key to success is to keep your head above the
-        water, never give up. A major key, never panic. Don’t panic, when it
-        gets crazy and rough, don’t panic, stay calm.
+      <p class="u-textLarge">
+        Alice was beginning to get very tired of sitting by her sister on the
+        bank, and of having nothing to do: once or twice she had peeped into the
+        book her sister was reading, but it had no pictures or conversations in
+        it, ‘and what is the use of a book,’ thought Alice ‘without pictures or
+        conversations?’
       </p>
     </section>
   </article>
