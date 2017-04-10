@@ -6,7 +6,7 @@ word-wrapping, direction, and color.
 */
 
 :root {
-  /* ~18px (1.333^-1 @24px) */
+  /* ~18px (1.333^1 @16px) */
   --text-size-large: 1.7777773333333335rem;
   --text-size-large-offset: 0.8600101599999999rem;
 
