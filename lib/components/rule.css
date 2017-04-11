@@ -8,14 +8,14 @@ Rule utilities to override the standard 1px rule of an `hr`
 */
 
 :root {
-  --rule-background-color: var(--color-brown-medium);
+  --rule-background-color: var(--color-gray-medium);
 }
 
 hr,
 .rule {
   border: none;
   margin: 0;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 hr::before,

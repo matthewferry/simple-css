@@ -6,17 +6,20 @@ word-wrapping, direction, and color.
 */
 
 :root {
-  /* ~18px (1.333^1 @16px) */
+  /* ~21px (1.333^1 @16px) */
   --text-size-large: 1.7777773333333335rem;
   --text-size-large-offset: 0.8600101599999999rem;
 
   /* ~16px (1.333^0 @16px) */
   --text-size-medium: var(--base-font-size);
-  --text-size-medium-offset: 0.5066766666666667rem;
+  --text-size-medium-offset: 0.5216766666666666rem;
 
-  /* ~14px (1.333^-2 @24px) */
-  --text-size-small: 1.1250005625002109rem;
-  --text-size-small-offset: 0.5950097974999241rem;
+  /* ~12px (1.333^-1 @16px) */
+  --text-size-small: 1.0000002500000624rem;
+  --text-size-small-offset: 0.6400099099999775rem;
+
+  --text-color-default: var(--color-black);
+  --text-color-weak: var(--color-gray-dark);
 }
 
 /*
@@ -136,11 +139,11 @@ Colors
 }
 
 .u-textDefaultColor {
-  color: @black !important;
+  color: var(--text-color-default) !important;
 }
 
 .u-textSubtleColor {
-  color: #5E788E !important;
+  color: var(--text-color-weak) !important;
 }
 
 /*
