@@ -5,7 +5,7 @@ const autoprefix = require('autoprefixer');
 const customProperties = require('postcss-custom-properties');
 const calc = require('postcss-calc');
 const stylelint = require('stylelint');
-const commentAn = require('./plugins/postcss-comment-annotations');
+//const commentAn = require('./plugins/postcss-comment-annotations');
 const cssnano = require('cssnano');
 
 const css = fs.readFileSync('index.css', 'utf8');
@@ -16,7 +16,7 @@ postcss([
     customProperties(),
     calc(),
     stylelint(),
-    commentAn(),
+    //commentAn(),
     cssnano({
       discardComments: {
         removeAll: true
