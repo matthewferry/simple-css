@@ -11,6 +11,7 @@ Button component
   --button-offset: 0.030283437466666664rem;
 }
 
+button,
 .button {
   background: transparent;
   border: none;
