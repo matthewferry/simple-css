@@ -3,29 +3,33 @@ Button component
 
 */
 :root {
-  --button-border-color: currentcolor;
   --button-border-width: 1px;
-  --button-color: inherit;
+  --button-color: var(--color-gray-dark);
+  --button-color-inverted: var(--color-white);
   --button-disabled-opacity: 0.6;
   --button-font: inherit;
-  --button-padding: 0.75em 1.25em;
+  --button-offset: 0.030283437466666664rem;
 }
 
 .button {
   background: transparent;
-  border-color: var(--button-border-color);
-  border-style: solid;
-  border-width: var(--button-border-width);
+  border: none;
+  box-shadow: inset 0 0 0 var(--button-border-width) var(--button-color);
   color: var(--button-color); /* 2 */
   display: inline-block;
   font: var(--button-font); /* 3 */
-  line-height: normal; /* Ensures that inheritance from font doesn't conflict */
-  margin: 0;
-  padding: var(--button-padding);
+  line-height: 1rem; /* Ensures that inheritance from font doesn't conflict */
+  margin: 0 0 calc(-1 * var(--button-offset));
+  padding: calc(1 + var(--button-offset)) 1rem 1rem;
   position: relative;
   text-align: center;
   text-decoration: none;
   user-select: none; /* 4 */
+}
+
+.button-inverted {
+  background: var(--button-color);
+  color: var(--button-color-inverted);
 }
 
 /**

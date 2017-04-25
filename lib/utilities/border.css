@@ -1,0 +1,25 @@
+/*
+
+@define Borders
+
+*/
+
+:root {
+  --border-width: 1px;
+  --border-style: solid;
+  --border-color: inherit;
+}
+
+.u-border {
+  position: relative !important;
+}
+
+.u-border::before {
+  border: var(--border-width) var(--border-style) var(--border-color);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

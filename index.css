@@ -18,6 +18,7 @@ repetition and provide consistent implementations. They also act as a
 philosophical alternative to functional (i.e. non-polyfill) mixins.
 */
 @import "lib/utilities/align.css";
+@import "lib/utilities/border.css";
 @import "lib/utilities/display.css";
 @import "lib/utilities/fade.css";
 @import "lib/utilities/layout.css";

@@ -23,15 +23,14 @@ Markup:
 </button>
 */
 :root {
-  --tooltip-font-color: white;
-  --tooltip-font-size: 12.8px;
-  --tooltip-caret-size: 6px;
-  --tooltip-border-radius: 3px;
-  --tooltip-background-color: black;
+  --tooltip-font-color: var(--color-white);
+  --tooltip-font-size: calc(var(--root-font-size) * var(--base-font-size));
+  --tooltip-caret-size: calc(var(--tooltip-font-size) / 2);
+  --tooltip-background-color: var(--color-gray-dark);
   --tooltip-zindex: 1000;
-  --tooltip-vertical-padding: 0.5em;
-  --tooltip-horizontal-padding: 1em;
-  --tooltip-offset-from-element: 3px;
+  --tooltip-vertical-padding: calc(var(--tooltip-font-size) / 2);
+  --tooltip-horizontal-padding: var(--tooltip-font-size);
+  --tooltip-offset-from-element: calc(var(--tooltip-font-size) / 4);
 }
 
 .tooltip {
@@ -53,7 +52,6 @@ Markup:
 
 .tooltip::before {
   background: var(--tooltip-background-color);
-  border-radius: var(--tooltip-border-radius);
   color: var(--tooltip-font-color);
   content: attr(aria-label);
   font-size: var(--tooltip-font-size);

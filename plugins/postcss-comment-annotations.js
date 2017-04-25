@@ -5,11 +5,13 @@ module.exports = postcss.plugin('postcss-comment-annotations', () => {
     let res = [];
 
     css.walkComments((comment) => {
-      //const tags = comment.text.match(/(?:\r?\n|^)((?:\r?\n|.)+?)(?=\r?\n\r?\n|$)/g);
-      comment.text.match(/\@\w+(\n|$)/).replace(/\n|$/, ' ');
-      comment.text.match(/\n\t+/).replace(/\t+/, '');
+      const tags = comment.text.match(/(?:\r?\n|^)((?:\r?\n|.)+?)(?=\r?\n\r?\n|$)/g);
+      //comment.text.match(/\@\w+(\n|$)/).replace(/\n|$/, ' ');
+      //comment.text.match(/\n\t+/).replace(/\t+/, '');
 
-      const tags = comment.text.match(/\@.+?(\n|$|\s.+?(\n|$))/gm);
+      //const tags = comment.text.match(/\@.+?(\n|$|\s.+?(\n|$))/gm);
+
+
       let tmp = {}
 
       if (tags) {
@@ -31,8 +33,10 @@ module.exports = postcss.plugin('postcss-comment-annotations', () => {
 
         if (Object.getOwnPropertyNames(tmp).length !== 0) {
           res.push(tmp);
+          console.log(tmp);
         }
       }
+
     });
   };
 });

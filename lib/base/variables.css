@@ -5,14 +5,18 @@
 */
 
 :root {
-  --root-font-size: 75%;
-  --base-font-family: Helvetica, Arial, Tahoma, sans-serif;
+  --root-font-size: .75;
+  --base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   --base-font-size: 1.3333333333333333rem;
   --base-spacing-unit: 2rem;
 
-  --color-black: #000;
   --color-white: #fff;
-  --color-gray-dark: #9f9e9e;
-  --color-gray-medium: #c7c6c5;
-  --color-gray-light: #dddcdb;
+  --color-gray-dark: #1B181B;
+  --color-gray-medium: #8B8994;
+  --color-gray-light: #CAC7CC;
+  --color-blue: #166EDA; /* 4.57:1 contrast ratio on white */
+  --color-green: #00A365; /* 3.09:1 contrast ratio on white */
+  --color-red: #E93544; /* 4.15:1 contrast ratio on white */
 }

@@ -18,8 +18,8 @@ word-wrapping, direction, and color.
   --text-size-small: 1.0000002500000624rem;
   --text-size-small-offset: 0.6400099099999775rem;
 
-  --text-color-default: var(--color-black);
-  --text-color-weak: var(--color-gray-dark);
+  --text-color-default: var(--color-gray-dark);
+  --text-color-weak: var(--color-gray-medium);
 }
 
 /*

@@ -1,6 +1,5 @@
 /*
 @define Rule
-
 @section Component
 
 @description
@@ -8,7 +7,7 @@ Rule utilities to override the standard 1px rule of an `hr`
 */
 
 :root {
-  --rule-background-color: var(--color-gray-medium);
+  --rule-background-color: var(--color-gray-light);
 }
 
 hr,
