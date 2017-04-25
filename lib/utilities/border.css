@@ -1,9 +1,15 @@
 /*
-
 @define Borders
+@section Utilities
 
+@description
+The border utilities allow you to add borders on the fly. Borders by default
+obtain their stroke color from its defined or inherited text color. You can
+modify the border color by combining text color utilities.
+
+@markup
+TODO
 */
-
 :root {
   --border-width: 1px;
   --border-style: solid;
@@ -28,44 +34,44 @@
 .u-borderVertical::before,
 .u-borderHorizontal::before,
 .u-borderNone::before {
-  bottom: 0;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+  bottom: 0 !important;
+  content: "" !important;
+  left: 0 !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
 }
 
 .u-border::before {
-  border: var(--border-width) var(--border-style);
+  border: var(--border-width) var(--border-style) !important;
 }
 
 .u-borderTop::before {
-  border-top: var(--border-width) var(--border-style);
+  border-top: var(--border-width) var(--border-style) !important;
 }
 
 .u-borderRight::before {
-  border-right: var(--border-width) var(--border-style);
+  border-right: var(--border-width) var(--border-style) !important;
 }
 
 .u-borderBottom::before {
-  border-bottom: var(--border-width) var(--border-style);
+  border-bottom: var(--border-width) var(--border-style) !important;
 }
 
 .u-borderLeft::before {
-  border-left: var(--border-width) var(--border-style);
+  border-left: var(--border-width) var(--border-style) !important;
 }
 
 .u-borderVertical::before {
-  border-bottom: var(--border-width) var(--border-style);
-  border-top: var(--border-width) var(--border-style);
+  border-bottom: var(--border-width) var(--border-style) !important;
+  border-top: var(--border-width) var(--border-style) !important;
 }
 
 .u-borderHorizontal::before {
-  border-left: var(--border-width) var(--border-style);
-  border-right: var(--border-width) var(--border-style);
+  border-left: var(--border-width) var(--border-style) !important;
+  border-right: var(--border-width) var(--border-style) !important;
 }
 
 .u-borderNone::before {
-  border: none;
+  border: none !important;
 }

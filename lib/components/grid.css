@@ -1,10 +1,24 @@
 /*
-Grid
+@define Grid
+@section Components
 
+@description
 No explicit widths are set by default on grid cells. Rely on combining
 `grid-cell` with a dimension utility or a component class that extends 'Grid'.
-*/
 
+@markup
+<div class="grid">
+  <div class="grid_cell u-size1of3">
+    Cell 1
+  </div>
+  <div class="grid_cell u-size1of3">
+    Cell 2
+  </div>
+  <div class="grid_cell u-size1of3">
+    Cell 3
+  </div>
+</div>
+*/
 :root {
   --grid-gutter-size: calc(2 * var(--base-spacing-unit));
 }
@@ -24,23 +38,88 @@ No explicit widths are set by default on grid cells. Rely on combining
 }
 
 /*
-Horizontally center one unit
+@define Grid gutters
+@section Components
+@parent Grid
+
+@description
+Provides gutter around `grid_cell`
+
+@markup
+<div class="grid {{modifierClass}}">
+  <div class="grid_cell u-size1of3">
+    Cell 1
+  </div>
+  <div class="grid_cell u-size1of3">
+    Cell 2
+  </div>
+  <div class="grid_cell u-size1of3">
+    Cell 3
+  </div>
+</div>
+
+@modifiers
+.grid-withGutter
+*/
+.grid-withGutter {
+  margin: 0 calc(-0.5 * var(--grid-gutter-size));
+}
+
+.grid-withGutter > .grid_cell {
+  padding: 0 calc(0.5 * var(--grid-gutter-size));
+}
+
+/*
+@define Horizontally center one cell
+@section Components
+@parent Grid
+
+@description
 Set a specific unit to be horizontally centered. Doesn't affect
 any other units. Can still contain a child `Grid` object.
+
+@markup
+<div class="grid">
+  <div class="grid_cell {{modifierClass}} u-size1of3">
+    Cell 1
+  </div>
+</div>
+
+@modifiers
+.grid_cell-center
 */
 .grid_cell-center {
   margin: 0 auto;
 }
 
 /*
-Align cells
+@define Vertically align cells
+@section Components
+@parent Grid
 
+@description
+Set the vertical alignment for the grid cells. This is a helpful alternative
+to `.arrange`.
+
+@markup
+<div class="grid {{modifierClass}}">
+  <div class="grid_cell u-size1of3">
+    Cell 1
+  </div>
+  <div class="grid_cell u-size1of3">
+    Cell 2
+  </div>
+  <div class="grid_cell u-size1of3">
+    Cell 3
+  </div>
+</div>
+
+@modifiers
 .grid-alignCenter
 .grid-alignRight
 .grid-alignMiddle
 .grid-alignBottom
 */
-
 .grid-alignCenter {
   justify-content: center;
 }
@@ -57,12 +136,28 @@ Align cells
   align-items: flex-end;
 }
 
-
 /*
-Distribute cells
+@define Distribute cells
+@section Components
+@parent Grid
 
+@description
 Horizontally and vertically distribute cells.
 
+@markup
+<div class="grid {{modifierClass}}">
+  <div class="grid_cell u-size1of3">
+    Cell 1
+  </div>
+  <div class="grid_cell u-size1of3">
+    Cell 2
+  </div>
+  <div class="grid_cell u-size1of3">
+    Cell 3
+  </div>
+</div>
+
+@modifiers
 .grid-fit         - Make all cells equal widths
 .grid-equalHeight - Make all cells equal height
 */
@@ -72,18 +167,4 @@ Horizontally and vertically distribute cells.
 
 .grid-equalHeight > .grid_cell {
   display: flex;
-}
-
-/*
-Gutters
-
-.grid-withGutter - Provides gutter around `grid_cell`
-*/
-
-.grid-withGutter {
-  margin: 0 calc(-0.5 * var(--grid-gutter-size));
-}
-
-.grid-withGutter > .grid_cell {
-  padding: 0 calc(0.5 * var(--grid-gutter-size));
 }

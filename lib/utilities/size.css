@@ -1,15 +1,15 @@
 /*
-Size utilities
+@define Size utilities
+@section Utilities
 
+@description
+Proportional widths specify the proportional width based on the size of its
+parent. Parts available are of whole widths of 2, 3, 4, 5, 6, 8, 10, and 12.
+Also available are intrinsic widths: `.u-sizeFit`, `.u-sizeFill`, `.u-sizeFull`.
+
+@markup
+TODO
 */
-
-/*
-Proportional widths
-
-Specifies the proportional width of an object, based on the size of its parent.
-Parts available are of whole widths of 2, 3, 4, 5, 6, 8, 10, and 12.
-*/
-
 .u-size1of12 {
   flex-basis: auto !important;
   width: calc(100% * 1 / 12) !important;
@@ -144,13 +144,6 @@ Parts available are of whole widths of 2, 3, 4, 5, 6, 8, 10, and 12.
   width: calc(100% * 11 / 12) !important;
 }
 
-/*
-Intrinsic widths
-
-.u-sizeFit  - Shrink to size of content
-.u-sizeFill - Fill available space
-.u-sizeFull - Take up full-width of parent
-*/
 .u-sizeFit {
   flex-basis: auto !important;
 }

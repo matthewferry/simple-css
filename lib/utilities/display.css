@@ -1,18 +1,13 @@
 /*
-Display utilities
+@define Display utilities
+@section Utilities
 
+@description
 These utilities are for hiding and showing elements to various degrees.
 
-.u-displayBlock           - Display block
-.u-displayInline          - Display inline
-.u-displayInlineBlock     - Display inline-block
-.u-displayTable           - Display as table
-.u-displayTableCell       - Display as table cell
-.u-displayTableRow        - Display as table row
-.u-displayHidden          - Remove from layout and screenreaders
-.u-displayHiddenVisually  - Remove from layout but not from screen readers
+@markup
+TODO
 */
-
 .u-displayBlock {
   display: block !important;
 }

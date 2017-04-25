@@ -1,9 +1,13 @@
 /*
-Link utilities
+@define Links
+@section Utilities
 
-TODO default link styles
+@description
+TODO
+
+@markup
+TODO
 */
-
 a,
 .u-link {
   text-decoration: underline !important;

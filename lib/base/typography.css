@@ -6,8 +6,10 @@
 @description
 Default styling for typography, set at a scale ratio of 1.125 on a 24px
 baseline grid
-*/
 
+@markup
+TODO
+*/
 :root {
   --cap-height: 0.705;
   --type-color: var(--color-gray-dark);

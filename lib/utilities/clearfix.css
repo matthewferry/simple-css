@@ -1,0 +1,25 @@
+/*
+@define Clearfix
+@section Utilities
+
+@description
+Clearfix allows you to contain floats. Use them anytime it has a child element
+that is floated. This method uses Nicolas Gallagher's micro clearfix, which
+makes use of space for content to avoid an Opera bug when the `contenteditable`
+attribute is included anywhere else in the document.
+
+@source
+http://nicolasgallagher.com/micro-clearfix-hack/
+
+@markup
+TODO
+*/
+.u-clearFix::before,
+.u-clearFix::after {
+  content: " " !important;
+  display: table !important;
+}
+
+.u-clearFix::after {
+  clear: both !important;
+}

@@ -1,14 +1,16 @@
 /*
-Tooltips
+@define Tooltips
+@section Components
 
+@description
 Tooltips are a way to display contextual information to users about a specific
 UI element. They should be succinct and used sparingly in cases where it's not
 possible to display the needed contextual information or in cases where
 context is supplementary. By default, they are limited to one line of text.
-For use-cases needing more than one line of text, please see the
-[tooltip sizing modifiers](#components-tooltips-sizes).
+For use-cases needing more than one line of text, please use the modifiers that
+define horizontal size.
 
-Warning:
+@warning
 ###### Mobile devices do not have `:hover` states
 Tooltips use `:hover` and `:focus` on their target element to reveal the
 tooltip. Mobile devices do not have hover states. Tapping the target will
@@ -16,10 +18,9 @@ trigger `:focus`, however, so it is not advised to use tooltips on buttons
 or anchors that have actions that may prevent the user from seeing the
 tooltip.
 
-Markup:
-<span>Do this thing</span>
-<button class="tooltip {{modifier_class}}" aria-label="thing, noun | \'thiŋ\, a spacial entity">
-  <span class="symbol symbol-info symbol-compact"></span>
+@markup
+<button class="tooltip" aria-label="thing, noun | \'thiŋ\, a spacial entity">
+  Hover over me
 </button>
 */
 :root {
@@ -79,48 +80,30 @@ Markup:
 }
 
 /*
-Tooltip alignment
+@define Tooltip alignment
+@section Components
+@parent tooltip
 
+@description
 Sometimes the element with a tooltip will be flush against the left or right
 of the window. Centering the tooltip could cause issues where the tooltip
 renders off the screen. In these cases, you'll want to align the tooltip with
 the element by aligning on the left or right side of the element.
 
-Warning:
+@warning
 ###### Cannot combine with `.tooltip-before` and `.tooltip-after`
 `.tooltip-before` and `.tooltip-after` will override the the alignment
 modifiers since they are already forcing the left and right values of the
 tooltip to appear before or after their targets.
 
-Markup:
-<div class="txt-l">
-  <div>
-    <span>Tooltips can be aligned left, above.</span>
-    <button class="tooltip tooltip-align-l" aria-label="left, adjective | \left\, located to the west of a subject facing north">
-      <span class="symbol symbol-info symbol-compact"></span>
-    </button>
-  </div>
-  <div>
-    <span>Tooltips can be aligned left, below.</span>
-    <button class="tooltip tooltip-below tooltip-align-l" aria-label="left, adjective | \left\, located to the west of a subject facing north">
-      <span class="symbol symbol-info symbol-compact"></span>
-    </button>
-  </div>
-</div>
-<div class="txt-r">
-  <div>
-    <span>Tooltips can be aligned right, above.</span>
-    <button class="tooltip tooltip-align-r" aria-label="right, adjective | \rahy\, located to the east of a subject facing north">
-      <span class="symbol symbol-info symbol-compact"></span>
-    </button>
-  </div>
-  <div>
-    <span>Tooltips can be aligned right, below.</span>
-    <button class="tooltip tooltip-below tooltip-align-r" aria-label="right, adjective | \rahy\, located to the east of a subject facing north">
-      <span class="symbol symbol-info symbol-compact"></span>
-    </button>
-  </div>
-</div>
+@markup
+<button class="tooltip {{modifierClass}}" aria-label="thing, noun | \'thiŋ\, a spacial entity">
+  Hover over me
+</button>
+
+@modifiers
+.tooltip-alignLeft
+.tooltip-alignRight
 */
 .tooltip-alignLeft::before,
 .tooltip-alignRight::before {
@@ -136,33 +119,26 @@ Markup:
   right: calc(-1 * var(--tooltip-horizontal-padding));
 }
 
-
-
 /*
-Tooltip positioning
+@define Tooltip positioning
+@section Components
+@parent tooltip
 
+@description
 Tooltips can be displayed on top of, after, below, or before their target
 element. This can be helpful if you want to esure the tooltip doesn't cover
 important information.
 
-Markup:
-<div>
-  <button class="btn tooltip tooltip-after" aria-label="You got it, dude.">
-    Show tooltip after
-  </button>
-</div>
-<div class="txt-c">
-  <button class="btn tooltip tooltip-below" aria-label="You got it, dude.">
-    Show tooltip below
-  </button>
-</div>
-<div class="txt-r">
-  <button class="btn tooltip tooltip-before" aria-label="You got it, dude.">
-    Show tooltip before
-  </button>
-</div>
-*/
+@markup
+<button class="tooltip {{modifierClass}}" aria-label="thing, noun | \'thiŋ\, a spacial entity">
+  Hover over me
+</button>
 
+@modifiers
+.tooltip-positionAfter
+.tooltip-positionBelow
+.tooltip-positionBefore
+*/
 .tooltip-positionAfter::before,
 .tooltip-positionAfter::after {
   left: 100%;
@@ -177,7 +153,6 @@ Markup:
   margin-left: var(--tooltip-offset-from-element);
 }
 
-/* Position below element */
 .tooltip-positionBelow::before,
 .tooltip-positionBelow::after {
   top: 100%;
@@ -193,7 +168,6 @@ Markup:
   margin-top: var(--tooltip-offset-from-element);
 }
 
-/* Position before element */
 .tooltip-positionBefore::before,
 .tooltip-positionBefore::after {
   left: auto;
@@ -210,7 +184,6 @@ Markup:
   margin-right: var(--tooltip-offset-from-element);
 }
 
-/* Positioning modifiers shared properties */
 .tooltip-positionAfter::before,
 .tooltip-positionAfter::after,
 .tooltip-positionBefore::before,
@@ -246,42 +219,26 @@ Markup:
 }
 
 /*
-Tooltip sizes
+@define Tooltip sizes
+@section Components
+@parent Tooltip
 
+@description
 The default tooltips are limited to one line to encourage concise context.
 However, in some cases, wrapping the text is desirable. To wrap the text, a
 width needs to be declared on the tooltip. There are four sizes to choose
 from: small, medium, large, and full-width.
 
-Markup:
-<div class="mbs">
-  <button class="btn tooltip tooltip-s"
-    aria-label="It's a world of laughter, a world of tears;
-    From time to time, the clouds give rest to the moon beholders">
-    <span>Small tooltip</span>
-  </button>
-</div>
-<div class="mvs">
-  <button class="btn tooltip tooltip-m"
-    aria-label="It's a world of laughter, a world of tears;
-    From time to time, the clouds give rest to the moon beholders">
-    <span>Medium tooltip</span>
-  </button>
-</div>
-<div class="mvs">
-  <button class="btn tooltip tooltip-l"
-    aria-label="It's a world of laughter, a world of tears;
-    From time to time, the clouds give rest to the moon beholders">
-    <span>Large tooltip</span>
-  </button>
-</div>
-<div class="mts">
-  <button class="btn tooltip tooltip-full"
-    aria-label="It's a world of laughter, a world of tears;
-    From time to time, the clouds give rest to the moon beholders">
-    <span>Tooltips can also be full-width</span>
-  </button>
-</div>
+@markup
+<button class="tooltip {{modifierClass}}" aria-label="thing, noun | \'thiŋ\, a spacial entity">
+  Hover over me
+</button>
+
+@modifiers
+.tooltip-sizeSmall
+.tooltip-sizeMedium
+.tooltip-sizeLarge
+.tooltip-sizeFull
 */
 
 .tooltip-sizeSmall::before,
@@ -308,6 +265,7 @@ Markup:
   width: 100%;
 }
 
+/* On mobile, the defined widths are reset */
 @media (max-width: 320px) {
   .tooltip-sizeSmall::before,
   .tooltip-sizeMedium::before,
