@@ -25,7 +25,7 @@ style types to `<ol>` and `<ul>` respectively.
 
 .u-listBulleted,
 .u-listOrdered {
-  margin: calc(var(--list-spacing) / 2) calc(var(--list-spacing) * 2) !important;
+  padding: var(--list-spacing) calc(var(--list-spacing) * 2) 0 !important;
 }
 
 .u-listBulleted li,
