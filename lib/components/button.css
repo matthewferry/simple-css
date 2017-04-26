@@ -1,55 +1,58 @@
 /*
-Button component
+@define Button
+@section Components
 
+@description
+Buttons are action elements that give users an indication of how to interact
+based on a call to act.
+
+@markup
+<button class="button">
+  Call to action
+</button>
 */
 :root {
-  --button-border-color: currentcolor;
   --button-border-width: 1px;
-  --button-color: inherit;
+  --button-color: var(--color-gray-dark);
+  --button-color-inverted: var(--color-white);
   --button-disabled-opacity: 0.6;
   --button-font: inherit;
-  --button-padding: 0.75em 1em;
+  --button-offset: 0.030283437466666664rem;
 }
 
+button,
 .button {
   background: transparent;
-  border-color: var(--button-border-color);
-  border-style: solid;
-  border-width: var(--button-border-width);
-  color: var(--button-color); /* 2 */
+  border: none;
+  box-shadow: inset 0 0 0 var(--button-border-width) var(--button-color);
+  color: var(--button-color); /* Inherit text color from ancestor. */
   display: inline-block;
-  font: var(--button-font); /* 3 */
-  margin: 0;
-  padding: var(--button-padding);
+  font: var(--button-font); /* Inherit font styles from ancestor. */
+  line-height: 1rem; /* Ensures that inheritance from font doesn't conflict */
+  margin: 0 0 calc(-1 * var(--button-offset));
+  padding: calc(1 + var(--button-offset)) 1rem 1rem;
   position: relative;
   text-align: center;
   text-decoration: none;
-  user-select: none; /* 4 */
+  user-select: none; /* Prevent button text from being selectable. */
 }
 
-/**
- * Remove excess padding and border in Firefox 4+
- */
-
+/* Remove excess padding and border in Firefox 4+ */
 .button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/**
- * Work around a Firefox/IE bug where the transparent `button` background
- * results in a loss of the default `button` focus styles.
- */
-
+/*
+Work around a Firefox/IE bug where the transparent `button` background
+results in a loss of the default `button` focus styles.
+*/
 .button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-/*
-UI states
-*/
-
+/* UI states */
 .button:hover,
 .button:focus,
 .button:active {
@@ -60,4 +63,26 @@ UI states
 .button.is-disabled {
   cursor: default;
   opacity: var(--button-disabled-opacity);
+}
+
+/*
+@define Button styles
+@section Components
+@parent Button
+
+@description
+Default buttons can be modified with varying styles, often to denote importance
+or to use when necessary, e.g. on a dark background.
+
+@markup
+<button class="button {{modifierClass}}">
+  Call to action
+</button>
+
+@modifiers
+.button-inverted  - Inverts the text color and background of the default button
+*/
+.button-inverted {
+  background: var(--button-color);
+  color: var(--button-color-inverted);
 }

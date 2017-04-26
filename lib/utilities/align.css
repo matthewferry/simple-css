@@ -1,14 +1,13 @@
 /*
-Vertical alignment utilities
+@define Vertical alignment
+@section Utilities
 
+@description
 Vertically align elements that have an appropriate `display` value.
 
-.u-alignBaseline  - Align baseline
-.u-alignBottom    - Align bottom
-.u-alignMiddle    - Align middle
-.u-alignTop       - Align top
+@markup
+TODO
 */
-
 .u-alignBaseline {
   vertical-align: baseline !important;
 }

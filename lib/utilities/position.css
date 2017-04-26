@@ -1,23 +1,15 @@
 /*
-Positioning
+@define Positioning
+@section Utilities
 
-Positioning utilities allow you to set the position context for
-any element. You can also apply a zero position by using the position
-location utilities.
+@description
+Positioning utilities allow you to set the position context, e.g.
+'.u-positionRelative', for any element. You can also apply a position location
+by using the position-location utils, e.g. `.u-positionTop`.
+
+@markup
+TODO
 */
-
-/*
-Position locations
-
-.u-positionTop          - Set top to 0
-.u-positionRight        - Set right to 0
-.u-positionBottom       - Set bottom to 0
-.u-positionLeft         - Set left to 0
-.u-positionFit          - Fill available space in closest layout context
-.u-positionFullScreen   - Fix across the full viewport
-.u-positionFixedCenter  - Fix element in the center of viewport
-*/
-
 .u-positionTop,
 .u-positionFit,
 .u-positionFullScreen {
@@ -54,16 +46,6 @@ Position locations
 .u-positionFullScreen {
   margin: auto !important;
 }
-
-
-/*
-Position types
-
-.u-positionStatic       - Position static
-.u-positionRelative     - Position based on its own normal value
-.u-positionAbsolute     - Position context is its first non-static parent
-.u-positionSticky       - Relative until it reaches a placement threshold where it sticks and acts like fixed position
-*/
 
 .u-positionFullScreen,
 .u-positionFixedCenter,

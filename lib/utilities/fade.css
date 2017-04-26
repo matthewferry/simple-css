@@ -1,20 +1,13 @@
 /*
-Fade (opacity) utilities
+@define Fade
+@section Utilities
 
+@description
 Fade applies opacity to an element. Values range from 10-100.
 
-.u-fadeBy100 - Fade by 100
-.u-fadeBy90  - Fade by 90
-.u-fadeBy80  - Fade by 80
-.u-fadeBy70  - Fade by 70
-.u-fadeBy60  - Fade by 60
-.u-fadeBy50  - Fade by 50
-.u-fadeBy40  - Fade by 40
-.u-fadeBy30  - Fade by 30
-.u-fadeBy20  - Fade by 20
-.u-fadeBy10  - Fade by 10
+@markup
+TODO
 */
-
 .u-fadeBy100 {
   opacity: 0 !important;
 }

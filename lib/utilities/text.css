@@ -1,23 +1,30 @@
 /*
-Text utilities
+@define Text utilities
+@section Utilities
 
+@description
 Use these utilities for setting casing, truncation, horizontal alignment,
 word-wrapping, direction, and color.
-*/
 
+@markup
+TODO
+*/
 :root {
-  --text-size-large: 1.333rem;
+  /* ~21px (1.333^1 @16px) */
+  --text-size-large: 1.7777773333333335rem;
+  --text-size-large-offset: 0.8600101599999999rem;
+
+  /* ~16px (1.333^0 @16px) */
   --text-size-medium: var(--base-font-size);
-  --text-size-small: 0.75rem;
+  --text-size-medium-offset: 0.5216766666666666rem;
+
+  /* ~12px (1.333^-1 @16px) */
+  --text-size-small: 1.0000002500000624rem;
+  --text-size-small-offset: 0.6400099099999775rem;
+
+  --text-color-default: var(--color-gray-dark);
+  --text-color-weak: var(--color-gray-medium);
 }
-
-/*
-Casing
-
-.u-textCapitalize - Sentence case on elements with appropriate `display` value
-.u-textUppercase  - Uppercase
-.u-textLowercase  - Lowercase
-*/
 
 .u-textCapitalize::first-letter {
   text-transform: capitalize !important;
@@ -31,14 +38,6 @@ Casing
   text-transform: lowercase !important;
 }
 
-
-/*
-Truncation
-
-Add this class to any block of text prevent wrapping and add an ellipsis at
-the end of the block when text overflows past the parent container width.
-*/
-
 .u-textTruncate {
   max-width: 100%; /* Ensure that the node has a maximum width */
   overflow: hidden !important;
@@ -46,17 +45,6 @@ the end of the block when text overflows past the parent container width.
   white-space: nowrap !important;
   word-wrap: normal !important; /* Ensure wrap isn't inherited */
 }
-
-
-/*
-Alignment
-
-Set alignment for all sizes or override at specific viewport sizes.
-
-.u-textCenter - Centered
-.u-textLeft   - Left
-.u-textRight  - Right
-*/
 
 .u-textCenter {
   text-align: center !important;
@@ -70,16 +58,6 @@ Set alignment for all sizes or override at specific viewport sizes.
   text-align: right !important;
 }
 
-
-/*
-Word-wrapping
-
-Use these class names to change text block word wrapping behavior.
-
-.u-textBreak  - Force-wrap long strings
-.u-textNoWrap - Force string to one line
-*/
-
 .u-textBreak {
   word-break: break-word !important; /* For webkit */
   word-wrap: break-word !important;
@@ -88,19 +66,6 @@ Use these class names to change text block word wrapping behavior.
 .u-textNoWrap {
  white-space: nowrap !important;
 }
-
-
-/*
-Direction
-
-Use these class names when an override on text direction is necessary. Usage
-of these classes should be minimal and only if the implications of modifying
-the text direction are fully thought-through. You can use either a utility
-class, the html attribute `dir`, or the html tag `<bdo>`.
-
-.u-textLeftToRight - Sets new context for text to run LTR in RTL parent context
-.u-textRightToLeft - Sets new context for text to run RTL in LTR parent context
-*/
 
 .u-textLeftToRight {
   direction: ltr !important;
@@ -114,47 +79,37 @@ class, the html attribute `dir`, or the html tag `<bdo>`.
   text-align: start;
 }
 
-
-/*
-Colors
-
-.u-textInheritColor - Inherit from parent
-.u-textDefaultColor - Black
-.u-textSubtleColor  - Very subtle
-*/
-
 .u-textInheritColor {
   color: inherit !important;
 }
 
 .u-textDefaultColor {
-  color: @black !important;
+  color: var(--text-color-default) !important;
 }
 
 .u-textSubtleColor {
-  color: @type-weak-color !important;
+  color: var(--text-color-weak) !important;
 }
 
-/*
-Size
-
-.u-textLarge  - Large
-.u-textMedium - Medium (default size)
-.u-textSmall  - Small
-
-*/
-/* Large */
 .u-textLarge {
+  display: inline-block !important; /* To allow for vertical padding */
   font-size: var(--text-size-large) !important;
+  line-height: 3rem !important;
+  margin-bottom: -var(--text-size-large-offset) !important;
+  padding-top: var(--text-size-large-offset) !important;
 }
 
-/* Base size */
 .u-textMedium {
+  display: inline-block !important; /* To allow for vertical padding */
   font-size: var(--text-size-medium) !important;
+  margin-bottom: -var(--text-size-medium-offset) !important;
+  padding-top: var(--text-size-medium-offset) !important;
 }
 
-/* Small */
 small,
 .u-textSmall {
+  display: inline-block !important; /* To allow for vertical padding */
   font-size: var(--text-size-small) !important;
+  margin-bottom: -var(--text-size-small-offset) !important;
+  padding-top: var(--text-size-small-offset) !important;
 }

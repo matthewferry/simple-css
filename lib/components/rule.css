@@ -1,0 +1,31 @@
+/*
+@define Rule
+@section Components
+
+@description
+Rule utilities to override the standard 1px rule of an `hr`
+
+@markup
+<hr class="rule" />
+*/
+
+:root {
+  --rule-background-color: var(--color-gray-light);
+  --rule-offset: 3rem;
+  --rule-stroke-width: 1px;
+  --rule-style: solid;
+}
+
+hr,
+.rule {
+  border: none;
+  margin: 0;
+  padding: var(--rule-offset) 0;
+}
+
+hr::before,
+.rule::before {
+  border-bottom: var(--rule-stroke-width) var(--rule-style) var(--rule-background-color);
+  content: "";
+  display: block;
+}

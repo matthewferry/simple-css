@@ -1,12 +1,14 @@
 /*
-Arrange objects
+@define Arrange objects
+@section Components
 
+@description
 The arrange component allows you to get some of the benefits of flexbox, such
 that you can display items in a row of cells that adhere to its width or take up
 available space. You can also control the vertical alignment.
 
-Markup:
-<div class="arrange {{modifier_class}}">
+@markup
+<div class="arrange">
   <div class="arrange_sizeFit">
     <img src="http://placeimg.com/44/44/animals" />
   </div>
@@ -17,16 +19,9 @@ Markup:
     <img src="http://placeimg.com/44/44/animals" />
   </div>
 </div>
-
-.arrange-top         - Align the expanded section to the top
-.arrange-middle      - Align the expanded section to the middle
-.arrange-bottom      - Align the expanded section to the bottom
-.arrange-equal       - Give each cell equal size
-.arrange-withGutter  - Give contents padding like traditional media object
 */
-
 :root {
-  --arrange-gutter-size: 10px;
+  --arrange-gutter-size: var(--base-spacing-);
 }
 
 .arrange {
@@ -50,8 +45,8 @@ Markup:
 }
 
 /*
-Where possible, protect against large images breaking the layout. Prevent them from
-exceeding the width of the main content block by making them fluid.
+Where possible, protect against large images breaking the layout. Prevent them
+from exceeding the width of the main content block by making them fluid.
 */
 .arrange_sizeFill img {
   height: auto;
@@ -67,7 +62,32 @@ cannot be fluid, otherwise they lose their ability to provide size to a cell.
   width: auto !important;
 }
 
-/* Vertical alignment modifiers */
+/*
+@define Vertical alignment modifiers
+@section Components
+@parent Arrange objects
+
+@description
+The default vertical alignment aligns the cells to the top. Use these modifiers
+to align the cells vertically in the middle or bottom.
+
+@markup
+<div class="arrange {{modifierClass}}">
+  <div class="arrange_sizeFit">
+    <img src="http://placeimg.com/44/44/animals" />
+  </div>
+  <div class="arrange_sizeFill">
+    <span>Rickity the Field Mouse</span>
+  </div>
+  <div class="arrange_sizeFit">
+    <img src="http://placeimg.com/44/44/animals" />
+  </div>
+</div>
+
+@modifiers
+.arrange-middle
+.arrange-bottom
+*/
 .arrange-middle > .arrange_sizeFill,
 .arrange-middle > .arrange_sizeFit {
   vertical-align: middle;
@@ -78,7 +98,31 @@ cannot be fluid, otherwise they lose their ability to provide size to a cell.
   vertical-align: bottom;
 }
 
-/* Equal-width modifier */
+/*
+@define Equal-width modifier
+@section Components
+@parent Arrange objects
+
+@description
+Force the cells to all take an equal width, regardless of the size of their
+contents.
+
+@markup
+<div class="arrange {{modifierClass}}">
+  <div class="arrange_sizeFit">
+    <img src="http://placeimg.com/44/44/animals" />
+  </div>
+  <div class="arrange_sizeFill">
+    <span>Rickity the Field Mouse</span>
+  </div>
+  <div class="arrange_sizeFit">
+    <img src="http://placeimg.com/44/44/animals" />
+  </div>
+</div>
+
+@modifiers
+.arrange-equal
+*/
 .arrange-equal {
   table-layout: fixed;
   width: 100%; /* Set width to calculate table cell width */
@@ -89,7 +133,30 @@ cannot be fluid, otherwise they lose their ability to provide size to a cell.
   width: 1%; /* Ensure the cells have an equal width. */
 }
 
-/* Gutter modifier */
+/*
+@define Gutter modifier
+@section Components
+@parent Arrange objects
+
+@description
+Give the cells a gutter, using padding, so that the contents are not abutting.
+
+@markup
+<div class="arrange {{modifierClass}}">
+  <div class="arrange_sizeFit">
+    <img src="http://placeimg.com/44/44/animals" />
+  </div>
+  <div class="arrange_sizeFill">
+    <span>Rickity the Field Mouse</span>
+  </div>
+  <div class="arrange_sizeFit">
+    <img src="http://placeimg.com/44/44/animals" />
+  </div>
+</div>
+
+@modifiers
+.arrange-withGutter
+*/
 .arrange-withGutter {
   margin: 0 calc(-0.5 * var(--arrange-gutter-size));
 }

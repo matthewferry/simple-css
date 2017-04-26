@@ -1,0 +1,42 @@
+/*
+@define Lists
+@section Utilities
+
+@description
+List styles are removed by default so that the semantics and presentation are
+separate concerns. Use these utilities to apply ordered and unordered list
+style types to `<ol>` and `<ul>` respectively.
+
+@markup
+<ol class="u-listOrdered">
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ol>
+<ul class="u-listBulleted">
+  <li>Apples</li>
+  <li>Bananas</li>
+  <li>Oranges</li>
+</ul>
+*/
+:root {
+  --list-spacing: var(--base-spacing-unit);
+}
+
+.u-listBulleted,
+.u-listOrdered {
+  padding: var(--list-spacing) calc(var(--list-spacing) * 2) 0 !important;
+}
+
+.u-listBulleted li,
+.u-listOrdered li {
+  margin: calc(var(--list-spacing) / 2) !important;
+}
+
+.u-listBulleted {
+  list-style-type: disc !important;
+}
+
+.u-listOrdered {
+  list-style-type: decimal !important;
+}

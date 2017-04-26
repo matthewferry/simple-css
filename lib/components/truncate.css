@@ -1,13 +1,15 @@
 /*
-Truncate
+@define Truncate
+@section Components
 
+@description
 Truncate long blocks of text without requiring any javascript libraries. This
 implementation relies on a consistent vertical rhythm in order to maintain an
 appropriate overflow since the height of the truncate component is calculated
 using the 24 pixel baseline grid.
 
-Markup:
-<div class="truncate {{modifier_class}}">
+@markup
+<div class="truncate">
   <div class="truncate_body">
     <div class="truncate_body_content">
       <p>
@@ -31,12 +33,7 @@ Markup:
     </div>
   </div>
 </div>
-
-.truncate-2-lines  - truncate to 2 lines
-.truncate-5-lines  - truncate to 5 lines
 */
-
-/* Truncate vars */
 :root {
   --truncate-ellipsis-width: 1em;
   --truncate-vertical-rhythm: 1.5rem;
@@ -94,7 +91,44 @@ Markup:
   margin: calc(var(--truncate-vertical-rhythm) / 2) 0; /* top/bottom margin of 1 unit of vertical spacing */
 }
 
-/* Line number modifiers */
+/*
+@define Line number modifiers
+@section Components
+@parent Truncate
+
+@description
+The default truncation happens at 3 lines, but you can decrease or increase the
+number of lines by using the line modifiers.
+
+@markup
+<div class="truncate {{modifierClass}}">
+  <div class="truncate_body">
+    <div class="truncate_body_content">
+      <p>
+        Call me Ishmael. Some years ago- never mind how long precisely- having
+        little or no money in my purse, and nothing particular to interest me
+        on shore, I thought I would sail about a little and see the watery part
+        of the world. It is a way I have of driving off the spleen and
+        regulating the circulation. Whenever I find myself growing grim about
+        the mouth; whenever it is a damp, drizzly November in my soul; whenever
+        I find myself involuntarily pausing before coffin warehouses, and
+        bringing up the rear of every funeral I meet; and especially whenever
+        my hypos get such an upper hand of me, that it requires a strong moral
+        principle to prevent me from deliberately stepping into the street, and
+        methodically knocking people's hats off- then, I account it high time to
+        get to sea as soon as I can. This is my substitute for pistol and ball.
+        With a philosophical flourish Cato throws himself upon his sword; I
+        quietly take to the ship. There is nothing surprising in this. If they
+        but knew it, almost all men in their degree, some time or other, cherish
+        very nearly the same feelings towards the ocean with me.
+      </p>
+    </div>
+  </div>
+</div>
+
+.truncate-2-lines
+.truncate-5-lines
+*/
 .truncate-size2 .truncate_body {
   height: calc(var(--truncate-vertical-rhythm) * 2);
 }
@@ -105,14 +139,17 @@ Markup:
 
 
 /*
-Truncate with toggle
+@define Truncate with toggle
+@section Components
+@parent Truncate
 
+@description
 Sometimes instead of linking to another page, you may want to expose the
 truncated text right there, inline. To do this, you'll need to add some extra
 elements: an input to create a switch; and a label for the input that contains
 the call to action.
 
-Markup:
+@markup
 <div class="truncate truncate-5-lines">
   <input class="truncate-toggle" type="checkbox" id="truncate-example" />
   <div class="truncate_body">
@@ -154,7 +191,6 @@ Markup:
   </label>
 </div>
 */
-
 .truncate_toggle,
 .truncate_toggle:checked ~ .truncate_action .truncate_action_more,
 .truncate_action_less {
