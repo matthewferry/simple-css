@@ -17,7 +17,7 @@ based on a call to act.
   --button-color-inverted: var(--color-white);
   --button-disabled-opacity: 0.6;
   --button-font: inherit;
-  --button-offset: 0.030283437466666664rem;
+  --button-offset: 0.030010000000000026rem;
 }
 
 button,
