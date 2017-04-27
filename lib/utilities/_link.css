@@ -8,8 +8,13 @@ TODO
 @markup
 TODO
 */
+:root {
+  --link-color: var(--color-blue);
+}
+
 a,
 .u-link {
+  color: var(--link-color);
   text-decoration: underline !important;
 }
 

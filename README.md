@@ -1,3 +1,6 @@
 # Simple CSS
 This is the WIP beginnings of a personal CSS starter kit for component-driven
-CSS. 
+CSS.
+
+# Use
+Modify the variable values in `/theme/` to suit your needs.

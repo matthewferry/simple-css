@@ -3,6 +3,7 @@ const postcss = require('postcss');
 const atImport = require('postcss-import');
 const autoprefix = require('autoprefixer');
 const customProperties = require('postcss-custom-properties');
+const customMedia = require("postcss-custom-media");
 const calc = require('postcss-calc');
 const stylelint = require('stylelint');
 //const commentAn = require('./plugins/postcss-comment-annotations');
@@ -14,6 +15,7 @@ postcss([
     atImport(),
     autoprefix(),
     customProperties(),
+    customMedia(),
     calc(),
     stylelint(),
     //commentAn(),

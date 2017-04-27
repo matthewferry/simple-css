@@ -15,7 +15,7 @@ TODO
   --text-size-large-offset: 0.8600101599999999rem;
 
   /* ~16px (1.333^0 @16px) */
-  --text-size-medium: var(--base-font-size);
+  --text-size-medium: var(--body-font-size);
   --text-size-medium-offset: 0.5216766666666666rem;
 
   /* ~12px (1.333^-1 @16px) */
@@ -23,7 +23,9 @@ TODO
   --text-size-small-offset: 0.6400099099999775rem;
 
   --text-color-default: var(--color-gray-dark);
-  --text-color-weak: var(--color-gray-medium);
+  --text-color-subtle: var(--color-gray-medium);
+  --text-color-positive: var(--color-green);
+  --text-color-negative: var(--color-red);
 }
 
 .u-textCapitalize::first-letter {
@@ -88,11 +90,19 @@ TODO
 }
 
 .u-textSubtleColor {
-  color: var(--text-color-weak) !important;
+  color: var(--text-color-subtle) !important;
+}
+
+.u-textPositiveColor {
+  color: var(--text-color-positive) !important;
+}
+
+.u-textNegativeColor {
+  color: var(--text-color-negative) !important;
 }
 
 .u-textLarge {
-  display: inline-block !important; /* To allow for vertical padding */
+  display: inline-block; /* To allow for vertical padding */
   font-size: var(--text-size-large) !important;
   line-height: 3rem !important;
   margin-bottom: -var(--text-size-large-offset) !important;
@@ -100,7 +110,7 @@ TODO
 }
 
 .u-textMedium {
-  display: inline-block !important; /* To allow for vertical padding */
+  display: inline-block; /* To allow for vertical padding */
   font-size: var(--text-size-medium) !important;
   margin-bottom: -var(--text-size-medium-offset) !important;
   padding-top: var(--text-size-medium-offset) !important;
@@ -108,7 +118,7 @@ TODO
 
 small,
 .u-textSmall {
-  display: inline-block !important; /* To allow for vertical padding */
+  display: inline-block; /* To allow for vertical padding */
   font-size: var(--text-size-small) !important;
   margin-bottom: -var(--text-size-small-offset) !important;
   padding-top: var(--text-size-small-offset) !important;

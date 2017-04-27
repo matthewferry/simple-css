@@ -1,0 +1,19 @@
+/*
+@define Color variables
+@section Theme
+
+@description
+Global color variables.
+
+@markup
+TODO
+*/
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-gray-dark: hsl(300, 6%, 10%);
+  --color-gray-medium: hsl(251, 5%, 56%);
+  --color-gray-light: hsl(276, 5%, 79%);
+  --color-blue: hsl(213, 82%, 47%); /* 4.57:1 contrast ratio on white */
+  --color-green: hsl(157, 100%, 32%); /* 3.09:1 contrast ratio on white */
+  --color-red: hsl(355, 80%, 56%); /* 4.15:1 contrast ratio on white */
+}

@@ -1,0 +1,40 @@
+@media (--medium-viewport) {
+  .u-md-displayBlock {
+    display: block !important;
+  }
+
+  .u-md-displayInline {
+    display: inline !important;
+  }
+
+  .u-md-displayInlineBlock {
+    display: inline-block !important;
+    max-width: 100%; /* Limit width on images to prevent Firefox bug from displaying full size */
+  }
+
+  .u-md-displayTable {
+    display: table !important;
+  }
+
+  .u-md-displayTableCell {
+    display: table-cell !important;
+  }
+
+  .u-md-displayTableRow {
+    display: table-row !important;
+  }
+
+  .u-md-displayHidden {
+    display: none !important;
+  }
+
+  .u-md-displayHiddenVisually {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+  }
+}

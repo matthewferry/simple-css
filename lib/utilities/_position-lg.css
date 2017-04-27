@@ -1,0 +1,63 @@
+@media (--large-viewport) {
+  .u-lg-positionTop,
+  .u-lg-positionFit,
+  .u-lg-positionFullScreen {
+    top: 0 !important;
+  }
+
+  .u-lg-positionRight,
+  .u-lg-positionFit,
+  .u-lg-positionFullScreen {
+    right: 0 !important;
+  }
+
+  .u-lg-positionBottom,
+  .u-lg-positionFit,
+  .u-lg-positionFullScreen {
+    bottom: 0 !important;
+  }
+
+  .u-lg-positionLeft,
+  .u-lg-positionFit,
+  .u-lg-positionFullScreen  {
+    left: 0 !important;
+  }
+
+  /* Element will be centered to its nearest relatively-positioned ancestor. */
+  .u-lg-positionFixedCenter,
+  .u-lg-positionAbsoluteCenter {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .u-lg-positionFit,
+  .u-lg-positionFullScreen {
+    margin: auto !important;
+  }
+
+  .u-lg-positionFullScreen,
+  .u-lg-positionFixedCenter,
+  .u-lg-positionFixed {
+    backface-visibility: hidden; /* Ensure fixed elements are promoted into a new layer */
+    position: fixed !important;
+  }
+
+  .u-lg-positionFit,
+  .u-lg-positionAbsoluteCenter,
+  .u-lg-positionAbsolute {
+    position: absolute !important;
+  }
+
+  .u-lg-positionRelative {
+    position: relative !important;
+  }
+
+  .u-lg-positionSticky {
+    position: sticky !important;
+  }
+
+  .u-lg-positionStatic {
+    position: static !important;
+  }
+}

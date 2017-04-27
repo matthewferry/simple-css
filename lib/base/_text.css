@@ -11,19 +11,19 @@ baseline grid
 TODO
 */
 :root {
-  --cap-height: 0.705;
+  --type-cap-height: 0.705;
   --type-color: var(--color-gray-dark);
 }
 
 html {
-  font-size: calc(var(--root-font-size) * 100%);
+  font-size: calc(var(--document-font-size) * 100%);
 }
 
 body {
   color: var(--type-color);
-  font-family: var(--base-font-family);
-  font-size: var(--base-font-size);
-  line-height: var(--base-spacing-unit);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
 }
 
 h1 {

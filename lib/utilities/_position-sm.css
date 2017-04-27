@@ -1,0 +1,63 @@
+@media (--small-viewport) {
+  .u-sm-positionTop,
+  .u-sm-positionFit,
+  .u-sm-positionFullScreen {
+    top: 0 !important;
+  }
+
+  .u-sm-positionRight,
+  .u-sm-positionFit,
+  .u-sm-positionFullScreen {
+    right: 0 !important;
+  }
+
+  .u-sm-positionBottom,
+  .u-sm-positionFit,
+  .u-sm-positionFullScreen {
+    bottom: 0 !important;
+  }
+
+  .u-sm-positionLeft,
+  .u-sm-positionFit,
+  .u-sm-positionFullScreen  {
+    left: 0 !important;
+  }
+
+  /* Element will be centered to its nearest relatively-positioned ancestor. */
+  .u-sm-positionFixedCenter,
+  .u-sm-positionAbsoluteCenter {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .u-sm-positionFit,
+  .u-sm-positionFullScreen {
+    margin: auto !important;
+  }
+
+  .u-sm-positionFullScreen,
+  .u-sm-positionFixedCenter,
+  .u-sm-positionFixed {
+    backface-visibility: hidden; /* Ensure fixed elements are promoted into a new layer */
+    position: fixed !important;
+  }
+
+  .u-sm-positionFit,
+  .u-sm-positionAbsoluteCenter,
+  .u-sm-positionAbsolute {
+    position: absolute !important;
+  }
+
+  .u-sm-positionRelative {
+    position: relative !important;
+  }
+
+  .u-sm-positionSticky {
+    position: sticky !important;
+  }
+
+  .u-sm-positionStatic {
+    position: static !important;
+  }
+}

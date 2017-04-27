@@ -1,0 +1,19 @@
+/*
+@define Sizing variables
+@section Theme
+
+@description
+Global sizing unit. This sets the vertical baseline rhythm and is responsible
+for any sizing increments for vertical spacing. It is highly recommended to keep
+this unit the equivalent of 2x the computed value of `--document-font-size`.
+
+@markup
+TODO
+*/
+:root {
+  --extra-small-spacing-unit: 1rem;
+  --small-spacing-unit: 2rem;
+  --medium-spacing-unit: 3rem;
+  --large-spacing-unit: 4rem;
+  --extra-large-spacing-unit: 6rem;
+}
