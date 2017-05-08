@@ -8,8 +8,9 @@
 @import "lib/base/index.css";
 
 /*
-Utilities
+@define Utilities
 
+@description
 Utility classes are low-level structural traits. They can be applied directly
 to any element; strung together; and used alongside component classes.
 
@@ -22,8 +23,9 @@ philosophical alternative to functional (i.e. non-polyfill) mixins.
 @import "lib/utilities/index.css";
 
 /*
-Components
+@define Components
 
+@description
 Components differ from utilities in that they represent an enclosed chunk of
 HTML. In some ways, they are similar to a custom element, enclosing specific
 semantics, styling, and behavior. Component driven development offers several
