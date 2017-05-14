@@ -28,9 +28,9 @@ button,
   color: var(--button-color); /* Inherit text color from ancestor. */
   display: inline-block;
   font: var(--button-font); /* Inherit font styles from ancestor. */
-  line-height: 1rem; /* Ensures that inheritance from font doesn't conflict */
-  margin: 0 0 calc(-1 * var(--button-offset));
-  padding: calc(1 + var(--button-offset)) 1rem 1rem;
+  line-height: 2rem; /* Ensures that inheritance from font doesn't conflict */
+  margin: 0;
+  padding: 1rem;
   position: relative;
   text-align: center;
   text-decoration: none;

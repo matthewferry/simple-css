@@ -1,0 +1,83 @@
+{
+  "gridUnit": 9,
+  "scaleBaseSize": 18,
+  "scaleRatio": 1.333333,
+  "capHeight": 0.7045898438,
+  "fontFamily": [
+    "-apple-system",
+    "BlinkMacSystemFont",
+    "\"Segoe UI\"",
+    "\"Roboto\"",
+    "\"Oxygen\"",
+    "\"Ubuntu\"",
+    "\"Cantarell\"",
+    "\"Fira Sans\"",
+    "\"Droid Sans\"",
+    "\"Helvetica Neue\"",
+    "sans-serif"
+  ],
+  "sizes" : [
+    {
+      "element": "body",
+      "scale": 0,
+      "top": 0,
+      "bottom": 0
+    },
+    {
+      "element": "h1",
+      "scale": 4,
+      "top": 1,
+      "bottom": 2
+    },
+    {
+      "element": "h2",
+      "scale": 3,
+      "top": 3,
+      "bottom": 4
+    },
+    {
+      "element": "h3",
+      "scale": 2,
+      "top": 4,
+      "bottom": 1
+    },
+    {
+      "element": "h4",
+      "scale": 1,
+      "top": 0,
+      "bottom": 0
+    },
+    {
+      "element": "h5",
+      "scale": -1,
+      "top": 0,
+      "bottom": 0
+    },
+    {
+      "element": "h6",
+      "scale": 0,
+      "top": 0,
+      "bottom": 0
+    },
+    {
+      "element": "text-size-small",
+      "scale": -1,
+      "top": 0,
+      "bottom": 0,
+      "lineHeight": 1.4
+    },
+    {
+      "element": "text-size-medium",
+      "scale": 0,
+      "top": 0,
+      "bottom": 0
+    },
+    {
+      "element": "text-size-large",
+      "scale": 1,
+      "top": 0,
+      "bottom": 0,
+      "lineHeight": 1.4
+    }
+  ]
+}
