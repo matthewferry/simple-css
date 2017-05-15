@@ -197,7 +197,7 @@ important information.
 .tooltip-positionAfter::after,
 .tooltip-positionBefore::before,
 .tooltip-positionBefore::after {
-  top:50%;
+  top: 50%;
 }
 
 .tooltip-positionAfter::before,

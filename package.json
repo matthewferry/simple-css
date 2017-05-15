@@ -4,7 +4,7 @@
   "description": "CSS building blocks for reusable web development",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node_modules/.bin/stylelint lib/**/*.css",
     "start": "node plugins/fontsize-calc.js; node index.js; python -m SimpleHTTPServer"
   },
   "author": "Matthew Ferry",

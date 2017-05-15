@@ -2,14 +2,13 @@ const fs = require('fs');
 const textConfig = require('../textConfig.json');
 const rootSize = textConfig.gridUnit;
 const scaleBaseSize = textConfig.scaleBaseSize;
-const bodyFamily = textConfig.fontFamily.toString();
+const bodyFamily = textConfig.fontFamily.join(', ');
 const scaleRatio = textConfig.scaleRatio;
 const capHeight = textConfig.capHeight;
 
 let variableSheet = `
   --root-font-size: ${rootSize / 16 * 100}%;
-  --body-font-family: ${bodyFamily};
-`;
+  --body-font-family: ${bodyFamily};`;
 
 textConfig.sizes.forEach((size) => {
   const fontSize = scaleBaseSize * Math.pow(scaleRatio, size.scale);
@@ -24,10 +23,9 @@ textConfig.sizes.forEach((size) => {
   --${size.element}-line-height: ${lineHeight}rem; /* ~${Math.round(lineHeight * rootSize / fontSize * 10000) / 10000} */
   --${size.element}-baseline-offset: ${baselineShift * fontSize / rootSize}rem;
   --${size.element}-margin-bottom: ${size.bottom};
-  --${size.element}-padding-top: ${size.top};
-  `;
+  --${size.element}-padding-top: ${size.top};`;
 
   variableSheet += typeVariables;
 });
 
-fs.writeFile('lib/theme/_text.css', ':root {' + variableSheet + '}');
+fs.writeFile('lib/theme/_text.css', ':root {' + variableSheet + '\n}');
