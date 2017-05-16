@@ -1,122 +1,172 @@
 /*
-@define Flex embed
+@define Truncate
 @section Components
 
 @description
-Flex embed allows responsive images and video to maintain their aspect ratio
-at any screen resolution size. The aspect-ratio hack is applied to an empty
-element because it allows the component to respect `max-height`. The default
-ratio uses 100% padding for a 1:1 aspect ratio. Use the aspect ratio modifiers
-for non-square embeds.
+Truncate long blocks of text without requiring any javascript libraries. This
+implementation relies on a consistent vertical rhythm in order to maintain an
+appropriate overflow since the height of the truncate component is calculated
+using the 24 pixel baseline grid.
 
 @markup
-<div class="flexEmbed">
-  <div class="flexEmbed_ratio"></div>
-  <div class="flexEmbed_content">
-    <img src="http://placeimg.com/1000/1000/arch" />
+<div class="truncate {{modifier_class}}">
+  <div class="truncate_body">
+    <div class="truncate_body_text">
+      <p>
+        Call me Ishmael. Some years ago- never mind how long precisely- having
+        little or no money in my purse, and nothing particular to interest me
+        on shore, I thought I would sail about a little and see the watery part
+        of the world. It is a way I have of driving off the spleen and
+        regulating the circulation. Whenever I find myself growing grim about
+        the mouth; whenever it is a damp, drizzly November in my soul; whenever
+        I find myself involuntarily pausing before coffin warehouses, and
+        bringing up the rear of every funeral I meet; and especially whenever
+        my hypos get such an upper hand of me, that it requires a strong moral
+        principle to prevent me from deliberately stepping into the street, and
+        methodically knocking people's hats off- then, I account it high time to
+        get to sea as soon as I can. This is my substitute for pistol and ball.
+        With a philosophical flourish Cato throws himself upon his sword; I
+        quietly take to the ship. There is nothing surprising in this. If they
+        but knew it, almost all men in their degree, some time or other, cherish
+        very nearly the same feelings towards the ocean with me.
+      </p>
+    </div>
   </div>
 </div>
+
+@modifiers
+.truncate-2-lines
+.truncate-5Lines
 */
-.flexEmbed {
-  display: block;
+:root {
+  --truncate-ellipsis-width: 1em;
+  --truncate-height-2-lines: calc(2 * var(--body-line-height));
+  --truncate-height-3-lines: calc(3 * var(--body-line-height));
+  --truncate-height-5-lines: calc (5 * var(--body-line-height));
+  --truncate-spacer-width: 0.2em;
+}
+
+.truncate_body {
+  height: var(--truncate-height-3-lines); /* Base height for the component set at 3 lines */
   overflow: hidden;
-  position: relative;
+  padding-right: var(--truncate-ellipsis-width); /* Give room for the ellipsis */
+  text-align: justify; /* Justifies except last line */
 }
 
-.flexEmbed_ratio {
+.truncate_body::before {
+  content: "";
+  float: left;
+  height: 100%;/* Sets the height and width so that the ellipsis will only clear if text is longer than the defined height of the truncate component */
+  width: var(--truncate-spacer-width);
+}
+
+.truncate_body::after,
+.truncate_body_text {
+  float: right; /* Floated so that the ellipsis can clear when text overflows */
+}
+
+.truncate_body::after {
+  box-sizing: content-box;
+  content: "\02026"; /* Display an ellipsis character */
+  left: 100%; /* Push the object to the right */
+  margin-right: calc(-1 * var(--truncate-ellipsis-width)); /* Keep the text selectable by pulling the ellipsis off */
+  padding-right: var(--truncate-spacer-width); /* Push it back 1px to account for the 1px spacer */
+  position: relative; /* Create positioning context for top and left properties */
+  text-align: left;
+  top: calc(var(--truncate-height-3-lines) / -3); /* Pulls the cleared object up on top of the truncated text */
+  width: var(--truncate-ellipsis-width);
+}
+
+.truncate_body p {
+  /* Forces text to be inline so that paragraphs that ending 1 line before the
+  truncation don't produce a blank line. */
+  display: inline;
+}
+
+.truncate_body_text {
+  width: 100%;
+  margin-left: calc(-1 * var(--truncate-spacer-width)); /* Pull back 1px on top of the 1px spacer */
+}
+
+/* Action text for CTA such as Read more */
+.truncate_action {
+  margin: calc(var(--truncate-height-3-lines) / 2) 0; /* top/bottom margin of 1 unit of vertical spacing */
+}
+
+/* Line number modifiers */
+.truncate-2Lines .truncate_body {
+  height: var(--truncate-height-2-lines);
+}
+
+.truncate-5Lines .truncate_body {
+  height: var(--truncate-height-5-lines);
+}
+
+/*
+@define Truncate with toggle
+@section Components
+@parent Truncate
+
+@description
+Sometimes instead of linking to another page, you may want to expose the
+truncated text right there, inline. To do this, you'll need to add some extra
+elements: an input to create a switch; and a label for the input that contains
+the call to action.
+
+@markup
+<div class="truncate truncate-5Lines">
+  <input class="truncate_toggle" type="checkbox" id="truncate-example" />
+  <div class="truncate_body">
+    <div class="truncate_body_text">
+      <p>
+        It was seven o'clock of a very warm evening in the Seeonee hills when
+        Father Wolf woke up from his day's rest, scratched himself, yawned,
+        and spread out his paws one after the other to get rid of the sleepy
+        feeling in their tips. Mother Wolf lay with her big gray nose dropped
+        across her four tumbling, squealing cubs, and the moon shone into the
+        mouth of the cave where they all lived. "Augrh!" said Father Wolf.
+        "It is time to hunt again." He was going to spring down hill when a
+        little shadow with a bushy tail crossed the threshold and whined:
+        "Good luck go with you, O Chief of the Wolves. And good luck and
+        strong white teeth go with noble children that they may never forget
+        the hungry in this world."
+      </p>
+      <p>
+        It was the jackal—Tabaqui, the Dish-licker—and the wolves of India
+        despise Tabaqui because he runs about making mischief, and telling
+        tales, and eating rags and pieces of leather from the village
+        rubbish-heaps. But they are afraid of him too, because Tabaqui, more
+        than anyone else in the jungle, is apt to go mad, and then he forgets
+        that he was ever afraid of anyone, and runs through the forest biting
+        everything in his way. Even the tiger runs and hides when little
+        Tabaqui goes mad, for madness is the most disgraceful thing that can
+        overtake a wild creature. We call it hydrophobia, but they call it
+        dewanee—the madness—and run.
+      </p>
+      <p>
+        "Enter, then, and look," said Father Wolf stiffly, "but there is no
+        food here."
+      </p>
+    </div>
+  </div>
+  <label class="truncate_action u-link" for="truncate-example">
+    <span class="truncate_action_more">View more</span>
+    <span class="truncate_action_less">View less</span>
+  </label>
+</div>
+*/
+.truncate_toggle,
+.truncate_toggle:checked ~ .truncate_action .truncate_action_more,
+.truncate_action_less {
+  display: none;
+}
+
+.truncate_toggle:checked + .truncate_body {
+  height: auto;
+  overflow: auto;
+}
+
+.truncate_toggle:checked ~ .truncate_action .truncate_action_less,
+.truncate_toggle:checked ~ .truncate_body p {
   display: block;
-  padding-bottom: 100%;
-  width: 100%;
-}
-
-/* Fit the content to the aspect ratio */
-.flexEmbed_content,
-.flexEmbed_content iframe,
-.flexEmbed_content embed,
-.flexEmbed_content object,
-.flexEmbed_content video {
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-/*
-@define Ratio modifiers
-@section Components
-@parent Flex embed
-
-@description
-The default ratio is set to 100%, or a 1x1 ratio. To obtain other aspect ratios,
-use the modifiers that best match the desired result and/or the content of the
-embed.
-
-@markup
-<div class="flexEmbed">
-  <div class="flexEmbed_ratio {{modifierClass}}"></div>
-  <div class="flexEmbed_content">
-    <img src="http://placeimg.com/1000/1000/arch" />
-  </div>
-</div>
-
-@modifiers
-.flexEmbed_ratio-4x1
-.flexEmbed_ratio-3x1
-.flexEmbed_ratio-2x1
-.flexEmbed_ratio-16x9
-.flexEmbed_ratio-4x3
-.flexEmbed_ratio-cinema
-*/
-.flexEmbed_ratio-4x1 {
-  padding-bottom: 25%;
-}
-
-.flexEmbed_ratio-3x1 {
-  padding-bottom: calc(100% / 3);
-}
-
-.flexEmbed_ratio-2x1 {
-  padding-bottom: 50%;
-}
-
-.flexEmbed_ratio-16x9 {
-  padding-bottom: 56.25%;
-}
-
-.flexEmbed_ratio-4x3 {
-  padding-bottom: 75%;
-}
-
-.flexEmbed_ratio-cinema {
-  padding-bottom: calc(100% / 2.35);
-}
-
-/*
-@define Cover images
-@section Components
-@parent Flex embed
-
-@description
-You can use the cover-image modifier to maintain aspect ratio for cases where
-you may need the image to be used as background.
-
-@markup
-<div class="flexEmbed {{modifierClass}}" style="background-image: url('http://placeimg.com/1000/1000/arch')">
-  <div class="flexEmbed_ratio flexEmbed_ratio-16x9"></div>
-  <div class="flexEmbed_content">
-    <h1>Hello world</h1>
-  </div>
-</div>
-
-@modifiers
-.flexEmbed-cover-image
-Style guideComponents - Flex embed - Cover images
-*/
-.flexEmbed-coverImage {
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0 auto;
 }

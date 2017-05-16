@@ -28,4 +28,4 @@ textConfig.sizes.forEach((size) => {
   variableSheet += typeVariables;
 });
 
-fs.writeFile('lib/theme/_text.css', ':root {' + variableSheet + '\n}');
+fs.writeFile('lib/theme/_text.css', ':root {' + variableSheet + '\n}\n');

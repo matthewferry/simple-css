@@ -20,7 +20,7 @@ style types to `<ol>` and `<ul>` respectively.
 </ul>
 */
 :root {
-  --list-spacing: var(--small-spacing-unit);
+  --list-spacing: var(--spacing-unit-small);
 }
 
 .u-listBulleted,

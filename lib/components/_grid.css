@@ -20,7 +20,7 @@ No explicit widths are set by default on grid cells. Rely on combining
 </div>
 */
 :root {
-  --grid-gutter-size: var(--small-spacing-unit);
+  --grid-gutter-size: var(--spacing-unit-small);
 }
 
 .grid {

@@ -21,7 +21,7 @@ available space. You can also control the vertical alignment.
 </div>
 */
 :root {
-  --arrange-gutter-size: var(--medium-spacing-unit);
+  --arrange-gutter-size: var(--spacing-unit-medium);
 }
 
 .arrange {

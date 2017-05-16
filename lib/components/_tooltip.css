@@ -82,7 +82,7 @@ tooltip.
 /*
 @define Tooltip alignment
 @section Components
-@parent tooltip
+@parent Tooltip
 
 @description
 Sometimes the element with a tooltip will be flush against the left or right
@@ -122,7 +122,7 @@ tooltip to appear before or after their targets.
 /*
 @define Tooltip positioning
 @section Components
-@parent tooltip
+@parent Tooltip
 
 @description
 Tooltips can be displayed on top of, after, below, or before their target
