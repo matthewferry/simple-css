@@ -1,6 +1,6 @@
 /*
 @define Truncate
-@section Components
+@parent Components
 
 @description
 Truncate long blocks of text without requiring any javascript libraries. This
@@ -104,7 +104,6 @@ using the 24 pixel baseline grid.
 
 /*
 @define Truncate with toggle
-@section Components
 @parent Truncate
 
 @description

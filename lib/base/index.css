@@ -1,3 +1,4 @@
+@import "normalize.css";
 @import "./_box-model.css";
 @import "./_list.css";
 @import "./_text.css";

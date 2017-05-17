@@ -1,10 +1,21 @@
-/* Normalization */
-@import "normalize.css";
+/*
+@define Theme
 
-/* Theme */
+@description
+The theme is where all global variables are defined, such as color, type sizing,
+sizing units, and breakpoint definition.
+*/
 @import "lib/theme/index.css";
 
-/* Base */
+/*
+@define Base
+
+@description
+Base styles are the foundational styles applied to HTML elements. This includes
+normalization of browser-specific styling, and sensible default styles for
+elements such as headings, anchors, and applying the same box model for all
+elements.
+*/
 @import "lib/base/index.css";
 
 /*

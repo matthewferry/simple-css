@@ -1,6 +1,6 @@
 /*
 @define Tooltips
-@section Components
+@parent Components
 
 @description
 Tooltips are a way to display contextual information to users about a specific
@@ -81,7 +81,6 @@ tooltip.
 
 /*
 @define Tooltip alignment
-@section Components
 @parent Tooltip
 
 @description
@@ -121,7 +120,6 @@ tooltip to appear before or after their targets.
 
 /*
 @define Tooltip positioning
-@section Components
 @parent Tooltip
 
 @description
@@ -220,7 +218,6 @@ important information.
 
 /*
 @define Tooltip sizes
-@section Components
 @parent Tooltip
 
 @description

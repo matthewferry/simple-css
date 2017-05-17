@@ -1,6 +1,6 @@
 /*
 @define Clearfix
-@section Utilities
+@parent Utilities
 
 @description
 Clearfix allows you to contain floats. Use them anytime it has a child element

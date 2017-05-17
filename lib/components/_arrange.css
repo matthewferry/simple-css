@@ -1,6 +1,6 @@
 /*
 @define Arrange objects
-@section Components
+@parent Components
 
 @description
 The arrange component allows you to get some of the benefits of flexbox, such
@@ -64,7 +64,6 @@ cannot be fluid, otherwise they lose their ability to provide size to a cell.
 
 /*
 @define Vertical alignment modifiers
-@section Components
 @parent Arrange objects
 
 @description
@@ -100,7 +99,6 @@ to align the cells vertically in the middle or bottom.
 
 /*
 @define Equal-width modifier
-@section Components
 @parent Arrange objects
 
 @description
@@ -135,7 +133,6 @@ contents.
 
 /*
 @define Gutter modifier
-@section Components
 @parent Arrange objects
 
 @description

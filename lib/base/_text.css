@@ -1,7 +1,7 @@
 /*
 @define Typography
 
-@section Base
+@parent Base
 
 @description
 Default styling for typography, set at a scale ratio of 1.125 on a 24px

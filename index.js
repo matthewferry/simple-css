@@ -6,7 +6,7 @@ const customProperties = require('postcss-custom-properties');
 const customMedia = require("postcss-custom-media");
 const calc = require('postcss-calc');
 const stylelint = require('stylelint');
-const commentAn = require('./plugins/postcss-comment-annotation');
+const commentAnnotation = require('postcss-comment-annotation');
 const cssnano = require('cssnano');
 
 const css = fs.readFileSync('index.css', 'utf8');
@@ -18,7 +18,7 @@ postcss([
     customMedia(),
     calc(),
     stylelint(),
-    commentAn(),
+    commentAnnotation(),
     cssnano({
       discardComments: {
         removeAll: true
