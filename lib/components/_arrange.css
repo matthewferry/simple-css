@@ -1,6 +1,6 @@
 /*
 @define Arrange objects
-@parent Components
+@section Components
 
 @description
 The arrange component allows you to get some of the benefits of flexbox, such
@@ -21,27 +21,19 @@ available space. You can also control the vertical alignment.
 </div>
 */
 :root {
-  --arrange-gutter-size: var(--spacing-unit-medium);
+  --arrange-gutter-size: var(--spacing-unit-extra-small);
 }
 
 .arrange {
-  box-sizing: border-box; /* 1 */
-  display: table; /* Rely on table layout */
-  margin: 0; /* Reset the default margins, e.g. `ul` */
-  min-width: 100%; /* Fill the full-width of parent context */
-  padding: 0; /* Reset the default padding, e.g. `ul` */
-  table-layout: auto; /* Reset layout to enable nesting */
+  display: flex;
 }
 
-.arrange_sizeFill,
 .arrange_sizeFit {
-  display: table-cell;
-  padding: 0; /* Reset the default padding, e.g. `li` */
-  vertical-align: top; /* Default alignment to top */
+  flex: 0 auto;
 }
 
 .arrange_sizeFill {
-  width: 100%;
+  flex: 1 auto;
 }
 
 /*
@@ -54,16 +46,8 @@ from exceeding the width of the main content block by making them fluid.
 }
 
 /*
-Defend against a side-effect of this layout pattern: images in 'arrange-sizeFit'
-cannot be fluid, otherwise they lose their ability to provide size to a cell.
-*/
-.arrange_sizeFit img {
-  max-width: none !important;
-  width: auto !important;
-}
-
-/*
 @define Vertical alignment modifiers
+@section Components
 @parent Arrange objects
 
 @description
@@ -87,52 +71,17 @@ to align the cells vertically in the middle or bottom.
 .arrange-middle
 .arrange-bottom
 */
-.arrange-middle > .arrange_sizeFill,
-.arrange-middle > .arrange_sizeFit {
-  vertical-align: middle;
+.arrange-middle {
+  align-items: center;
 }
 
-.arrange-bottom > .arrange_sizeFill,
-.arrange-bottom > .arrange_sizeFit {
-  vertical-align: bottom;
-}
-
-/*
-@define Equal-width modifier
-@parent Arrange objects
-
-@description
-Force the cells to all take an equal width, regardless of the size of their
-contents.
-
-@markup
-<div class="arrange {{modifierClass}}">
-  <div class="arrange_sizeFit">
-    <img src="http://placeimg.com/44/44/animals" />
-  </div>
-  <div class="arrange_sizeFill">
-    <span>Rickity the Field Mouse</span>
-  </div>
-  <div class="arrange_sizeFit">
-    <img src="http://placeimg.com/44/44/animals" />
-  </div>
-</div>
-
-@modifiers
-.arrange-equal
-*/
-.arrange-equal {
-  table-layout: fixed;
-  width: 100%; /* Set width to calculate table cell width */
-}
-
-.arrange-equal > .arrange_sizeFill,
-.arrange-equal > .arrange_sizeFit {
-  width: 1%; /* Ensure the cells have an equal width. */
+.arrange-bottom {
+  align-items: flex-end;
 }
 
 /*
 @define Gutter modifier
+@section Components
 @parent Arrange objects
 
 @description
