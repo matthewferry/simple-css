@@ -1,7 +1,7 @@
 /*
 @define Box model
 
-@parent Base
+@section Base
 
 @description
 The `*` selector ensures that all elements use the `border-box` box model unless

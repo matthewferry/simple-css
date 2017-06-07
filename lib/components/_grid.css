@@ -1,6 +1,7 @@
-/*
-@define Grid
-@parent Components
+/**
+@define grid
+@title Grid
+@section Components
 
 @description
 No explicit widths are set by default on grid cells. Rely on combining
@@ -20,7 +21,7 @@ No explicit widths are set by default on grid cells. Rely on combining
 </div>
 */
 :root {
-  --grid-gutter-size: var(--spacing-unit-small);
+  --grid-gutter-size: var(--small-spacing-unit);
 }
 
 .grid {
@@ -39,6 +40,7 @@ No explicit widths are set by default on grid cells. Rely on combining
 
 /*
 @define Grid gutters
+@section Components
 @parent Grid
 
 @description
@@ -70,6 +72,7 @@ Provides gutter around `grid_cell`
 
 /*
 @define Horizontally center one cell
+@section Components
 @parent Grid
 
 @description
@@ -92,6 +95,7 @@ any other units. Can still contain a child `Grid` object.
 
 /*
 @define Vertically align cells
+@section Components
 @parent Grid
 
 @description
@@ -135,6 +139,7 @@ to `.arrange`.
 
 /*
 @define Distribute cells
+@section Components
 @parent Grid
 
 @description

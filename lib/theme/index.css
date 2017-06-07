@@ -1,3 +1,11 @@
+/*
+@define theme
+@title Theme
+
+@description
+The theme is where all global variables are defined, such as color, type sizing,
+sizing units, and breakpoint definition.
+*/
 @import "./_breakpoints.css";
 @import "./_colors.css";
 @import "./_spacing.css";

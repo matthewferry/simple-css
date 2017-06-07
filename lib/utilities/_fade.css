@@ -1,6 +1,7 @@
-/*
-@define Fade
-@parent Utilities
+/**
+@define utilities
+@title Fade
+@section Utilities
 
 @description
 Fade applies opacity to an element. Values range from 10-100.

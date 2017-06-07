@@ -1,6 +1,7 @@
-/*
-@define Button
-@parent Components
+/**
+@define button
+@title Buttons
+@section Components
 
 @description
 Buttons are action elements that give users an indication of how to interact
@@ -20,6 +21,7 @@ based on a call to act.
   --button-offset: 0.030010000000000026rem;
 }
 
+/* postcss-bem-linter: ignore */
 button,
 .button {
   background: transparent;
@@ -59,14 +61,14 @@ results in a loss of the default `button` focus styles.
   text-decoration: none;
 }
 
-.button:disabled,
-.button.is-disabled {
+.button:disabled {
   cursor: default;
   opacity: var(--button-disabled-opacity);
 }
 
 /*
 @define Button styles
+@section Components
 @parent Button
 
 @description

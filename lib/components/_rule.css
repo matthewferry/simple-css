@@ -1,6 +1,7 @@
-/*
-@define Rule
-@parent Components
+/**
+@define rule
+@title Rules
+@section Components
 
 @description
 Rule utilities to override the standard 1px rule of an `hr`
@@ -16,6 +17,7 @@ Rule utilities to override the standard 1px rule of an `hr`
   --rule-style: solid;
 }
 
+/* postcss-bem-linter: ignore */
 hr,
 .rule {
   border: none;
@@ -23,6 +25,7 @@ hr,
   padding: var(--rule-offset) 0;
 }
 
+/* postcss-bem-linter: ignore */
 hr::before,
 .rule::before {
   border-bottom: var(--rule-stroke-width) var(--rule-style) var(--rule-background-color);

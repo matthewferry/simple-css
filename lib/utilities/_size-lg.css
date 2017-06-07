@@ -1,3 +1,7 @@
+/**
+@define utilities
+@title Responsive size screen large
+*/
 @media (--large-viewport) {
   .u-lg-size1of12 {
     flex-basis: auto !important;

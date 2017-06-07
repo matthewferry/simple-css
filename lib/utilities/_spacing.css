@@ -1,6 +1,7 @@
-/*
-@define Spacing utilities
-@parent Utilities
+/**
+@define utilities
+@title Spacing utilities
+@section Utilities
 
 @description
 TODO
@@ -9,23 +10,23 @@ TODO
 TODO
 */
 .u-ptxs {
-  padding-top: var(--spacing-unit-extra-small) !important;
+  padding-top: var(--extra-small-spacing-unit) !important;
 }
 
 .u-pts {
-  padding-top: var(--spacing-unit-small) !important;
+  padding-top: var(--small-spacing-unit) !important;
 }
 
 .u-ptm {
-  padding-top: var(--spacing-unit-medium) !important;
+  padding-top: var(--medium-spacing-unit) !important;
 }
 
 .u-ptl {
-  padding-top: var(--spacing-unit-large) !important;
+  padding-top: var(--large-spacing-unit) !important;
 }
 
 .u-ptxl {
-  padding-top: var(--spacing-unit-extra-large) !important;
+  padding-top: var(--extra-large-spacing-unit) !important;
 }
 
 .u-ptn {
@@ -33,23 +34,23 @@ TODO
 }
 
 .u-prxs {
-  padding-right: var(--spacing-unit-extra-small) !important;
+  padding-right: var(--extra-small-spacing-unit) !important;
 }
 
 .u-prs {
-  padding-right: var(--spacing-unit-small) !important;
+  padding-right: var(--small-spacing-unit) !important;
 }
 
 .u-prm {
-  padding-right: var(--spacing-unit-medium) !important;
+  padding-right: var(--medium-spacing-unit) !important;
 }
 
 .u-prl {
-  padding-right: var(--spacing-unit-large) !important;
+  padding-right: var(--large-spacing-unit) !important;
 }
 
 .u-prxl {
-  padding-right: var(--spacing-unit-extra-large) !important;
+  padding-right: var(--extra-large-spacing-unit) !important;
 }
 
 .u-prn {
@@ -57,23 +58,23 @@ TODO
 }
 
 .u-pbxs {
-  padding-bottom: var(--spacing-unit-extra-small) !important;
+  padding-bottom: var(--extra-small-spacing-unit) !important;
 }
 
 .u-pbs {
-  padding-bottom: var(--spacing-unit-small) !important;
+  padding-bottom: var(--small-spacing-unit) !important;
 }
 
 .u-pbm {
-  padding-bottom: var(--spacing-unit-medium) !important;
+  padding-bottom: var(--medium-spacing-unit) !important;
 }
 
 .u-pbl {
-  padding-bottom: var(--spacing-unit-large) !important;
+  padding-bottom: var(--large-spacing-unit) !important;
 }
 
 .u-pbxl {
-  padding-bottom: var(--spacing-unit-extra-large) !important;
+  padding-bottom: var(--extra-large-spacing-unit) !important;
 }
 
 .u-pbn {
@@ -81,23 +82,23 @@ TODO
 }
 
 .u-plxs {
-  padding-left: var(--spacing-unit-extra-small) !important;
+  padding-left: var(--extra-small-spacing-unit) !important;
 }
 
 .u-pls {
-  padding-left: var(--spacing-unit-small) !important;
+  padding-left: var(--small-spacing-unit) !important;
 }
 
 .u-plm {
-  padding-left: var(--spacing-unit-medium) !important;
+  padding-left: var(--medium-spacing-unit) !important;
 }
 
 .u-pll {
-  padding-left: var(--spacing-unit-large) !important;
+  padding-left: var(--large-spacing-unit) !important;
 }
 
 .u-plxl {
-  padding-left: var(--spacing-unit-extra-large) !important;
+  padding-left: var(--extra-large-spacing-unit) !important;
 }
 
 .u-pln {
@@ -105,28 +106,28 @@ TODO
 }
 
 .u-phxs {
-  padding-left: var(--spacing-unit-extra-small) !important;
-  padding-right: var(--spacing-unit-extra-small) !important;
+  padding-left: var(--extra-small-spacing-unit) !important;
+  padding-right: var(--extra-small-spacing-unit) !important;
 }
 
 .u-phs {
-  padding-left: var(--spacing-unit-small) !important;
-  padding-right: var(--spacing-unit-small) !important;
+  padding-left: var(--small-spacing-unit) !important;
+  padding-right: var(--small-spacing-unit) !important;
 }
 
 .u-phm {
-  padding-left: var(--spacing-unit-medium) !important;
-  padding-right: var(--spacing-unit-medium) !important;
+  padding-left: var(--medium-spacing-unit) !important;
+  padding-right: var(--medium-spacing-unit) !important;
 }
 
 .u-phl {
-  padding-left: var(--spacing-unit-large) !important;
-  padding-right: var(--spacing-unit-large) !important;
+  padding-left: var(--large-spacing-unit) !important;
+  padding-right: var(--large-spacing-unit) !important;
 }
 
 .u-phxl {
-  padding-left: var(--spacing-unit-extra-large) !important;
-  padding-right: var(--spacing-unit-extra-large) !important;
+  padding-left: var(--extra-large-spacing-unit) !important;
+  padding-right: var(--extra-large-spacing-unit) !important;
 }
 
 .u-phn {
@@ -135,53 +136,53 @@ TODO
 }
 
 .u-pvxs {
-  padding-top: var(--spacing-unit-extra-small) !important;
-  padding-bottom: var(--spacing-unit-extra-small) !important;
+  padding-bottom: var(--extra-small-spacing-unit) !important;
+  padding-top: var(--extra-small-spacing-unit) !important;
 }
 
 .u-pvs {
-  padding-top: var(--spacing-unit-small) !important;
-  padding-bottom: var(--spacing-unit-small) !important;
+  padding-bottom: var(--small-spacing-unit) !important;
+  padding-top: var(--small-spacing-unit) !important;
 }
 
 .u-pvm {
-  padding-top: var(--spacing-unit-medium) !important;
-  padding-bottom: var(--spacing-unit-medium) !important;
+  padding-bottom: var(--medium-spacing-unit) !important;
+  padding-top: var(--medium-spacing-unit) !important;
 }
 
 .u-pvl {
-  padding-top: var(--spacing-unit-large) !important;
-  padding-bottom: var(--spacing-unit-large) !important;
+  padding-bottom: var(--large-spacing-unit) !important;
+  padding-top: var(--large-spacing-unit) !important;
 }
 
 .u-pvxl {
-  padding-top: var(--spacing-unit-extra-large) !important;
-  padding-bottom: var(--spacing-unit-extra-large) !important;
+  padding-bottom: var(--extra-large-spacing-unit) !important;
+  padding-top: var(--extra-large-spacing-unit) !important;
 }
 
 .u-pvn {
-  padding-top: 0 !important;
   padding-bottom: 0 !important;
+  padding-top: 0 !important;
 }
 
 .u-paxs {
-  padding: var(--spacing-unit-extra-small) !important;
+  padding: var(--extra-small-spacing-unit) !important;
 }
 
 .u-pas {
-  padding: var(--spacing-unit-small) !important;
+  padding: var(--small-spacing-unit) !important;
 }
 
 .u-pam {
-  padding: var(--spacing-unit-medium) !important;
+  padding: var(--medium-spacing-unit) !important;
 }
 
 .u-pal {
-  padding: var(--spacing-unit-large) !important;
+  padding: var(--large-spacing-unit) !important;
 }
 
 .u-paxl {
-  padding: var(--spacing-unit-extra-large) !important;
+  padding: var(--extra-large-spacing-unit) !important;
 }
 
 .u-pan {
@@ -189,23 +190,23 @@ TODO
 }
 
 .u-mtxs {
-  margin-top: var(--spacing-unit-extra-small) !important;
+  margin-top: var(--extra-small-spacing-unit) !important;
 }
 
 .u-mts {
-  margin-top: var(--spacing-unit-small) !important;
+  margin-top: var(--small-spacing-unit) !important;
 }
 
 .u-mtm {
-  margin-top: var(--spacing-unit-medium) !important;
+  margin-top: var(--medium-spacing-unit) !important;
 }
 
 .u-mtl {
-  margin-top: var(--spacing-unit-large) !important;
+  margin-top: var(--large-spacing-unit) !important;
 }
 
 .u-mtxl {
-  margin-top: var(--spacing-unit-extra-large) !important;
+  margin-top: var(--extra-large-spacing-unit) !important;
 }
 
 .u-mtn {
@@ -213,23 +214,23 @@ TODO
 }
 
 .u-mrxs {
-  margin-right: var(--spacing-unit-extra-small) !important;
+  margin-right: var(--extra-small-spacing-unit) !important;
 }
 
 .u-mrs {
-  margin-right: var(--spacing-unit-small) !important;
+  margin-right: var(--small-spacing-unit) !important;
 }
 
 .u-mrm {
-  margin-right: var(--spacing-unit-medium) !important;
+  margin-right: var(--medium-spacing-unit) !important;
 }
 
 .u-mrl {
-  margin-right: var(--spacing-unit-large) !important;
+  margin-right: var(--large-spacing-unit) !important;
 }
 
 .u-mrxl {
-  margin-right: var(--spacing-unit-extra-large) !important;
+  margin-right: var(--extra-large-spacing-unit) !important;
 }
 
 .u-mrn {
@@ -237,23 +238,23 @@ TODO
 }
 
 .u-mbxs {
-  margin-bottom: var(--spacing-unit-extra-small) !important;
+  margin-bottom: var(--extra-small-spacing-unit) !important;
 }
 
 .u-mbs {
-  margin-bottom: var(--spacing-unit-small) !important;
+  margin-bottom: var(--small-spacing-unit) !important;
 }
 
 .u-mbm {
-  margin-bottom: var(--spacing-unit-medium) !important;
+  margin-bottom: var(--medium-spacing-unit) !important;
 }
 
 .u-mbl {
-  margin-bottom: var(--spacing-unit-large) !important;
+  margin-bottom: var(--large-spacing-unit) !important;
 }
 
 .u-mbxl {
-  margin-bottom: var(--spacing-unit-extra-large) !important;
+  margin-bottom: var(--extra-large-spacing-unit) !important;
 }
 
 .u-mbn {
@@ -261,23 +262,23 @@ TODO
 }
 
 .u-mlxs {
-  margin-left: var(--spacing-unit-extra-small) !important;
+  margin-left: var(--extra-small-spacing-unit) !important;
 }
 
 .u-mls {
-  margin-left: var(--spacing-unit-small) !important;
+  margin-left: var(--small-spacing-unit) !important;
 }
 
 .u-mlm {
-  margin-left: var(--spacing-unit-medium) !important;
+  margin-left: var(--medium-spacing-unit) !important;
 }
 
 .u-mll {
-  margin-left: var(--spacing-unit-large) !important;
+  margin-left: var(--large-spacing-unit) !important;
 }
 
 .u-mlxl {
-  margin-left: var(--spacing-unit-extra-large) !important;
+  margin-left: var(--extra-large-spacing-unit) !important;
 }
 
 .u-mln {
@@ -285,28 +286,28 @@ TODO
 }
 
 .u-mhxs {
-  margin-left: var(--spacing-unit-extra-small) !important;
-  margin-right: var(--spacing-unit-extra-small) !important;
+  margin-left: var(--extra-small-spacing-unit) !important;
+  margin-right: var(--extra-small-spacing-unit) !important;
 }
 
 .u-mhs {
-  margin-left: var(--spacing-unit-small) !important;
-  margin-right: var(--spacing-unit-small) !important;
+  margin-left: var(--small-spacing-unit) !important;
+  margin-right: var(--small-spacing-unit) !important;
 }
 
 .u-mhm {
-  margin-left: var(--spacing-unit-medium) !important;
-  margin-right: var(--spacing-unit-medium) !important;
+  margin-left: var(--medium-spacing-unit) !important;
+  margin-right: var(--medium-spacing-unit) !important;
 }
 
 .u-mhl {
-  margin-left: var(--spacing-unit-large) !important;
-  margin-right: var(--spacing-unit-large) !important;
+  margin-left: var(--large-spacing-unit) !important;
+  margin-right: var(--large-spacing-unit) !important;
 }
 
 .u-mhxl {
-  margin-left: var(--spacing-unit-extra-large) !important;
-  margin-right: var(--spacing-unit-extra-large) !important;
+  margin-left: var(--extra-large-spacing-unit) !important;
+  margin-right: var(--extra-large-spacing-unit) !important;
 }
 
 .u-mhn {
@@ -315,53 +316,53 @@ TODO
 }
 
 .u-mvxs {
-  margin-top: var(--spacing-unit-extra-small) !important;
-  margin-bottom: var(--spacing-unit-extra-small) !important;
+  margin-bottom: var(--extra-small-spacing-unit) !important;
+  margin-top: var(--extra-small-spacing-unit) !important;
 }
 
 .u-mvs {
-  margin-top: var(--spacing-unit-small) !important;
-  margin-bottom: var(--spacing-unit-small) !important;
+  margin-bottom: var(--small-spacing-unit) !important;
+  margin-top: var(--small-spacing-unit) !important;
 }
 
 .u-mvm {
-  margin-top: var(--spacing-unit-medium) !important;
-  margin-bottom: var(--spacing-unit-medium) !important;
+  margin-bottom: var(--medium-spacing-unit) !important;
+  margin-top: var(--medium-spacing-unit) !important;
 }
 
 .u-mvl {
-  margin-top: var(--spacing-unit-large) !important;
-  margin-bottom: var(--spacing-unit-large) !important;
+  margin-bottom: var(--large-spacing-unit) !important;
+  margin-top: var(--large-spacing-unit) !important;
 }
 
 .u-mvxl {
-  margin-top: var(--spacing-unit-extra-large) !important;
-  margin-bottom: var(--spacing-unit-extra-large) !important;
+  margin-bottom: var(--extra-large-spacing-unit) !important;
+  margin-top: var(--extra-large-spacing-unit) !important;
 }
 
 .u-mvn {
-  margin-top: 0 !important;
   margin-bottom: 0 !important;
+  margin-top: 0 !important;
 }
 
 .u-maxs {
-  margin: var(--spacing-unit-extra-small) !important;
+  margin: var(--extra-small-spacing-unit) !important;
 }
 
 .u-mas {
-  margin: var(--spacing-unit-small) !important;
+  margin: var(--small-spacing-unit) !important;
 }
 
 .u-mam {
-  margin: var(--spacing-unit-medium) !important;
+  margin: var(--medium-spacing-unit) !important;
 }
 
 .u-mal {
-  margin: var(--spacing-unit-large) !important;
+  margin: var(--large-spacing-unit) !important;
 }
 
 .u-maxl {
-  margin: var(--spacing-unit-extra-large) !important;
+  margin: var(--extra-large-spacing-unit) !important;
 }
 
 .u-man {

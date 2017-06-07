@@ -1,6 +1,6 @@
 /*
 @define Sizing variables
-@parent Theme
+@section Theme
 
 @description
 Global sizing unit. This sets the vertical baseline rhythm and is responsible
@@ -11,9 +11,9 @@ this unit the equivalent of 2x the computed value of `--document-font-size`.
 TODO
 */
 :root {
-  --spacing-unit-extra-small: 1rem;
-  --spacing-unit-small: 2rem;
-  --spacing-unit-medium: 3rem;
-  --spacing-unit-large: 5rem;
-  --spacing-unit-extra-large: 8rem;
+  --extra-small-spacing-unit: 1rem;
+  --small-spacing-unit: 2rem;
+  --medium-spacing-unit: 3rem;
+  --large-spacing-unit: 5rem;
+  --extra-large-spacing-unit: 8rem;
 }

@@ -1,3 +1,17 @@
+/*
+@define utilities
+@title Utilities
+
+@description
+Utility classes are low-level structural traits. They can be applied directly
+to any element; strung together; and used alongside component classes.
+
+Utilities exist because certain CSS properties and patterns are used frequently.
+For example: floats, containing floats, vertical alignment, text truncation,
+basic spacing (padding and margin). Relying on utilities can help to reduce
+repetition and provide consistent implementations. They also act as a
+philosophical alternative to functional (i.e. non-polyfill) mixins.
+*/
 @import "./_align.css";
 @import "./_border.css";
 @import "./_clearfix.css";

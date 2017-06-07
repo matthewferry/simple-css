@@ -1,5 +1,6 @@
-/*
-@define Arrange objects
+/**
+@define arrange; weak
+@title Arrange objects
 @section Components
 
 @description
@@ -21,7 +22,7 @@ available space. You can also control the vertical alignment.
 </div>
 */
 :root {
-  --arrange-gutter-size: var(--spacing-unit-extra-small);
+  --arrange-gutter-size: var(--medium-spacing-unit);
 }
 
 .arrange {
@@ -77,35 +78,6 @@ to align the cells vertically in the middle or bottom.
 
 .arrange-bottom {
   align-items: flex-end;
-}
-
-/*
-@define Equal width objects
-@section Components
-@parent Arrange objects
-
-@description
-Ensure width of all objects is equal.
-
-@markup
-<div class="arrange {{modifierClass}}">
-  <div class="arrange_sizeFit">
-    <img src="http://placeimg.com/44/44/animals" />
-  </div>
-  <div class="arrange_sizeFill">
-    <span>Rickity the Field Mouse</span>
-  </div>
-  <div class="arrange_sizeFit">
-    <img src="http://placeimg.com/44/44/animals" />
-  </div>
-</div>
-
-@modifiers
-.arrange-equal
-*/
-.arrange-equal .arrange_sizeFit,
-.arrange-equal .arrange_sizeFill {
-  flex-basis: 100%;
 }
 
 /*

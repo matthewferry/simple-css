@@ -4,3 +4,6 @@ CSS.
 
 # Use
 Modify the variable values in `/theme/` to suit your needs.
+
+# Shoutouts
+Inspired and based on the work of OOCSS, SUIT CSS, BEM, Sassline.

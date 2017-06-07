@@ -1,4 +1,9 @@
 {
+  "plugins": [
+    "stylelint-selector-bem-pattern",
+    "stylelint-suitcss",
+    "stylelint-order",
+  ],
   "rules": {
     "at-rule-empty-line-before": [ "always", {
       except: [
@@ -12,10 +17,10 @@
     "at-rule-semicolon-newline-after": "always",
     "block-closing-brace-empty-line-before": "never",
     "block-closing-brace-newline-after": "always",
-    "block-closing-brace-newline-before": "always-multi-line",
+    "block-closing-brace-newline-before": "always",
     "block-closing-brace-space-before": "always-single-line",
     "block-no-empty": true,
-    "block-opening-brace-newline-after": "always-multi-line",
+    "block-opening-brace-newline-after": "always",
     "block-opening-brace-space-after": "always-single-line",
     "block-opening-brace-space-before": "always",
     "color-hex-case": "lower",
@@ -27,16 +32,7 @@
     } ],
     "comment-no-empty": true,
     "comment-whitespace-inside": "always",
-    "custom-property-empty-line-before": [ "always", {
-      except: [
-        "after-custom-property",
-        "first-nested",
-      ],
-      ignore: [
-        "after-comment",
-        "inside-single-line-block",
-      ],
-    } ],
+    "custom-property-empty-line-before": "never",
     "declaration-bang-space-after": "never",
     "declaration-bang-space-before": "always",
     "declaration-block-no-duplicate-properties": [ true, {
@@ -44,10 +40,10 @@
     } ],
     "declaration-block-no-redundant-longhand-properties": true,
     "declaration-block-no-shorthand-property-overrides": true,
-    "declaration-block-semicolon-newline-after": "always-multi-line",
+    "declaration-block-semicolon-newline-after": "always",
     "declaration-block-semicolon-space-after": "always-single-line",
     "declaration-block-semicolon-space-before": "never",
-    "declaration-block-single-line-max-declarations": 1,
+    "declaration-block-single-line-max-declarations": 0,
     "declaration-block-trailing-semicolon": "always",
     "declaration-colon-newline-after": "always-multi-line",
     "declaration-colon-space-after": "always-single-line",
@@ -94,6 +90,19 @@
     "no-missing-end-of-source-newline": true,
     "number-leading-zero": "always",
     "number-no-trailing-zeros": true,
+    "order/order": [
+      "custom-properties",
+      "declarations"
+      ],
+    "order/properties-alphabetical-order": true,
+    "plugin/selector-bem-pattern": {
+      "componentName": "^[a-z][a-zA-Z0-9]*$",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z0-9][a-zA-Z0-9]*)?(?:_[a-z0-9][a-zA-Z0-9]*)?(?:-[a-z0-9][a-zA-Z0-9]*)?$",
+        "combined": "^\\.{componentName}(?:-[a-z0-9][a-zA-Z0-9]*)?(?:_[a-z0-9][a-zA-Z0-9]*)?(?:-[a-z0-9][a-zA-Z0-9]*)?$",
+      },
+      "utilitySelectors": "^\\.u-(sm-|md-|lg-)?(?:[a-z0-9][a-zA-Z0-9]*)+$",
+    },
     "property-case": "lower",
     "property-no-unknown": true,
     "rule-empty-line-before": [ "always-multi-line", {
@@ -119,11 +128,14 @@
     "selector-type-no-unknown": true,
     "shorthand-property-no-redundant-values": true,
     "string-no-newline": true,
+    "suitcss/custom-property-no-outside-root": true,
+    "suitcss/root-no-standard-properties": true,
+    "suitcss/selector-root-no-composition": true,
     "unit-case": "lower",
     "unit-no-unknown": true,
     "value-list-comma-newline-after": "always-multi-line",
     "value-list-comma-space-after": "always-single-line",
     "value-list-comma-space-before": "never",
     "value-list-max-empty-lines": 0,
-  },
+  }
 }

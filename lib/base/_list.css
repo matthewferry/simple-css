@@ -1,6 +1,6 @@
 /*
 @define Lists
-@parent Base
+@section Base
 
 @description
 List styles are removed by default so that they can be used semantically,
@@ -9,9 +9,16 @@ separating the style concern from the semantic concern.
 @markup
 TODO
 */
+:root {
+  --list-spacing: var(--small-spacing-unit);
+}
+
 ul,
 ol {
   margin: 0;
-  padding: 0;
-  list-style-type: none;
+  padding: var(--list-spacing) calc(var(--list-spacing) * 2) 0;
+}
+
+li {
+  margin: calc(var(--list-spacing) / 2) !important;
 }

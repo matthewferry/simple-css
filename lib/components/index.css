@@ -1,7 +1,25 @@
+/*
+@define components
+@title Components
+
+@description
+Components differ from utilities in that they represent an enclosed chunk of
+HTML. In some ways, they are similar to a custom element, enclosing specific
+semantics, styling, and behavior. Component driven development offers several
+benefits when reading and writing HTML and CSS:
+
+1. It keeps the specificity of selectors low.
+2. It helps to decouple presentation semantics from document semantics.
+
+Unlike utilities, components are much more robust. They can be extended by
+adding modifiers, and may have descendent elements. A component modifier is a
+class that modifies the presentation of the base component in some form. These
+modifications often rely on the base presentation, so the class should be
+included in the HTML in addition to the base component class.
+*/
 @import "./_arrange.css";
-@import "./_button.css";
+@import "./button/_button.css";
 @import "./_flex-embed.css";
 @import "./_grid.css";
 @import "./_rule.css";
 @import "./_tooltip.css";
-@import "./_truncate.css";

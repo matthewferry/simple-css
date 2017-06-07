@@ -1,6 +1,7 @@
-/*
-@define Vertical alignment
-@parent Utilities
+/**
+@define utilities
+@title Vertical alignment
+@section Utilities
 
 @description
 Vertically align elements that have an appropriate `display` value.

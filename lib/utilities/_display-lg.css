@@ -1,3 +1,7 @@
+/**
+@define utilities
+@title Responsive display screen large
+*/
 @media (--large-viewport) {
   .u-lg-displayBlock {
     display: block !important;

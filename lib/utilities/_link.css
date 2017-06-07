@@ -1,6 +1,7 @@
-/*
-@define Links
-@parent Utilities
+/**
+@define utilities
+@title Links
+@section Utilities
 
 @description
 TODO
@@ -12,6 +13,7 @@ TODO
   --link-color: var(--color-blue);
 }
 
+/* postcss-bem-linter: ignore */
 a,
 .u-link {
   color: var(--link-color);

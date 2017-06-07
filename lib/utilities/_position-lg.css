@@ -1,3 +1,7 @@
+/**
+@define utilities
+@title Responsive position screen large
+*/
 @media (--large-viewport) {
   .u-lg-positionTop,
   .u-lg-positionFit,

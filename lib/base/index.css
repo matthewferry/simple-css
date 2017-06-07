@@ -1,4 +1,13 @@
-@import "normalize.css";
+/*
+@define Base
+@title Base
+
+@description
+Base styles are the foundational styles applied to HTML elements. This includes
+normalization of browser-specific styling, and sensible default styles for
+elements such as headings, anchors, and applying the same box model for all
+elements.
+*/
 @import "./_box-model.css";
 @import "./_list.css";
 @import "./_text.css";

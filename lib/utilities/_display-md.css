@@ -1,3 +1,7 @@
+/**
+@define utilities
+@title Responsive display screen medium
+*/
 @media (--medium-viewport) {
   .u-md-displayBlock {
     display: block !important;

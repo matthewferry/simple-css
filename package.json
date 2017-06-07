@@ -4,8 +4,9 @@
   "description": "CSS building blocks for reusable web development",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/stylelint lib/**/*.css",
-    "start": "node plugins/fontsize-calc.js; node index.js; python -m SimpleHTTPServer"
+    "build-css": "node helpers/fontsize-calc.js && node index.js",
+    "test": "node_modules/.bin/stylelint lib/**/*.css index.css",
+    "start": "npm run build-css && node helpers/watch.js"
   },
   "author": "Matthew Ferry",
   "license": "ISC",
@@ -15,10 +16,13 @@
     "normalize.css": "^5.0.0",
     "postcss": "^5.2.12",
     "postcss-calc": "^5.3.1",
-    "postcss-comment-annotation": "^1.0.0",
     "postcss-custom-media": "^5.0.1",
     "postcss-custom-properties": "^5.0.2",
     "postcss-import": "^9.1.0",
-    "stylelint": "^7.8.0"
+    "postcss-reporter": "^3.0.0",
+    "stylelint": "^7.8.0",
+    "stylelint-order": "^0.4.4",
+    "stylelint-selector-bem-pattern": "^1.0.0",
+    "stylelint-suitcss": "^1.0.0"
   }
 }

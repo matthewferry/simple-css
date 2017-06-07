@@ -1,6 +1,7 @@
-/*
-@define Flex embed
-@parent Components
+/**
+@define flexEmbed; weak
+@title Responsive media
+@section Components
 
 @description
 Flex embed allows responsive images and video to maintain their aspect ratio
@@ -45,6 +46,7 @@ for non-square embeds.
 
 /*
 @define Ratio modifiers
+@section Components
 @parent Flex embed
 
 @description
@@ -94,6 +96,7 @@ embed.
 
 /*
 @define Cover images
+@section Components
 @parent Flex embed
 
 @description

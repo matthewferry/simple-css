@@ -1,3 +1,7 @@
+/**
+@define utilities
+@title Responsive position screen medium
+*/
 @media (--medium-viewport) {
   .u-md-positionTop,
   .u-md-positionFit,

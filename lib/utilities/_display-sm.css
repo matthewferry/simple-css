@@ -1,3 +1,7 @@
+/**
+@define utilities
+@title Responsive display screen small
+*/
 @media (--small-viewport) {
   .u-sm-displayBlock {
     display: block !important;
