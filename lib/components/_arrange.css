@@ -80,6 +80,35 @@ to align the cells vertically in the middle or bottom.
 }
 
 /*
+@define Equal width objects
+@section Components
+@parent Arrange objects
+
+@description
+Ensure width of all objects is equal.
+
+@markup
+<div class="arrange {{modifierClass}}">
+  <div class="arrange_sizeFit">
+    <img src="http://placeimg.com/44/44/animals" />
+  </div>
+  <div class="arrange_sizeFill">
+    <span>Rickity the Field Mouse</span>
+  </div>
+  <div class="arrange_sizeFit">
+    <img src="http://placeimg.com/44/44/animals" />
+  </div>
+</div>
+
+@modifiers
+.arrange-equal
+*/
+.arrange-equal .arrange_sizeFit,
+.arrange-equal .arrange_sizeFill {
+  flex-basis: 100%;
+}
+
+/*
 @define Gutter modifier
 @section Components
 @parent Arrange objects
