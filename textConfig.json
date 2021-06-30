@@ -1,7 +1,8 @@
 {
-  "gridUnit": 9,
-  "scaleBaseSize": 18,
-  "scaleRatio": 1.333333,
+  "rootSize": 12,
+  "gridUnit": 6,
+  "scaleBaseSize": 17,
+  "scaleRatio": 1.25,
   "capHeight": 0.7045898438,
   "fontFamily": [
     "-apple-system",
@@ -26,20 +27,20 @@
     {
       "element": "h1",
       "scale": 4,
-      "top": 1,
-      "bottom": 2
+      "top": 0,
+      "bottom": 0
     },
     {
       "element": "h2",
       "scale": 3,
-      "top": 3,
-      "bottom": 4
+      "top": 0,
+      "bottom": 0
     },
     {
       "element": "h3",
       "scale": 2,
-      "top": 4,
-      "bottom": 1
+      "top": 0,
+      "bottom": 0
     },
     {
       "element": "h4",
@@ -49,15 +50,22 @@
     },
     {
       "element": "h5",
-      "scale": -1,
+      "scale": 0,
       "top": 0,
       "bottom": 0
     },
     {
       "element": "h6",
-      "scale": 0,
+      "scale": -1,
       "top": 0,
       "bottom": 0
+    },
+    {
+      "element": "text-size-extra-small",
+      "scale": -2,
+      "top": 0,
+      "bottom": 0,
+      "lineHeight": 1.4
     },
     {
       "element": "text-size-small",
@@ -75,6 +83,13 @@
     {
       "element": "text-size-large",
       "scale": 1,
+      "top": 0,
+      "bottom": 0,
+      "lineHeight": 1.4
+    },
+    {
+      "element": "text-size-extra-large",
+      "scale": 2,
       "top": 0,
       "bottom": 0,
       "lineHeight": 1.4

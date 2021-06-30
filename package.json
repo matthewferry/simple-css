@@ -4,25 +4,35 @@
   "description": "CSS building blocks for reusable web development",
   "main": "index.js",
   "scripts": {
-    "build-css": "node helpers/fontsize-calc.js && node index.js",
-    "test": "node_modules/.bin/stylelint lib/**/*.css index.css",
-    "start": "npm run build-css && node helpers/watch.js"
+    "build": "node helpers/fontsize-calc.js && postcss index.css -o dist/index.css",
+    "compress": "postcss dist/index.css -u cssnano -o dist/index.min.css",
+    "all-in-one": "npm run build && npm run compress",
+    "test": "stylelint src/**/*.css index.css",
+    "start": "npm run build && python -m SimpleHTTPServer"
   },
   "author": "Matthew Ferry",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^6.7.2",
-    "cssnano": "^3.10.0",
+    "cssnano": "^4.1.10",
     "normalize.css": "^5.0.0",
-    "postcss": "^5.2.12",
-    "postcss-calc": "^5.3.1",
-    "postcss-custom-media": "^5.0.1",
-    "postcss-custom-properties": "^5.0.2",
-    "postcss-import": "^9.1.0",
-    "postcss-reporter": "^3.0.0",
+    "postcss-cli": "^6.1.2",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "6.5.0",
     "stylelint": "^7.8.0",
     "stylelint-order": "^0.4.4",
     "stylelint-selector-bem-pattern": "^1.0.0",
     "stylelint-suitcss": "^1.0.0"
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-import": {},
+      "postcss-preset-env": {
+        "features": {
+          "custom-media-queries": {
+            "preserve": false
+          }
+        }
+      }
+    }
   }
 }

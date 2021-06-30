@@ -1,3 +1,5 @@
+@import "normalize.css";
+
 /*
 @define Theme
 
@@ -5,7 +7,7 @@
 The theme is where all global variables are defined, such as color, type sizing,
 sizing units, and breakpoint definition.
 */
-@import "lib/theme/index.css";
+@import "src/theme/index.css";
 
 /*
 @define Base
@@ -16,7 +18,7 @@ normalization of browser-specific styling, and sensible default styles for
 elements such as headings, anchors, and applying the same box model for all
 elements.
 */
-@import "lib/base/index.css";
+@import "src/base/index.css";
 
 /*
 @define Utilities
@@ -31,7 +33,7 @@ basic spacing (padding and margin). Relying on utilities can help to reduce
 repetition and provide consistent implementations. They also act as a
 philosophical alternative to functional (i.e. non-polyfill) mixins.
 */
-@import "lib/utilities/index.css";
+@import "src/utilities/index.css";
 
 /*
 @define Components
@@ -51,4 +53,4 @@ class that modifies the presentation of the base component in some form. These
 modifications often rely on the base presentation, so the class should be
 included in the HTML in addition to the base component class.
 */
-@import "lib/components/index.css";
+@import "src/components/index.css";

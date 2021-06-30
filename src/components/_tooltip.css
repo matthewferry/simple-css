@@ -267,7 +267,7 @@ from: small, medium, large, and full-width.
 }
 
 /* On mobile, the defined widths are reset */
-@media (max-width: 320px) {
+@media (width < --small-viewport) {
   .tooltip-sizeSmall::before,
   .tooltip-sizeMedium::before,
   .tooltip-sizeLarge::before {

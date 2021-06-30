@@ -18,7 +18,7 @@ modifications often rely on the base presentation, so the class should be
 included in the HTML in addition to the base component class.
 */
 @import "./_arrange.css";
-@import "./button/_button.css";
+@import "./_button.css";
 @import "./_flex-embed.css";
 @import "./_grid.css";
 @import "./_rule.css";

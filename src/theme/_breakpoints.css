@@ -1,0 +1,14 @@
+/*
+@define Breakpoint variables
+@section Theme
+
+@description
+Global breakpoint values.
+
+@markup
+TODO
+*/
+
+@custom-media --small-viewport (min-width:28rem) and (max-width:54rem);
+@custom-media --medium-viewport (min-width:54rem) and (max-width:80rem);
+@custom-media --large-viewport (min-width:80rem);

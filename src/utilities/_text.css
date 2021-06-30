@@ -91,27 +91,40 @@ TODO
 }
 
 .u-textLarge {
-  display: inline-block; /* To allow for vertical padding */
+  /* display: inline-block; /* To allow for vertical padding */
+  font-size: var(--text-size-extra-large-font-size) !important;
+  line-height: var(--text-size-extra-large-line-height) !important;
+  /* margin-bottom: calc(var(--text-size-extra-large-margin-bottom) - var(--text-size-extra-large-baseline-offset)) !important;
+  padding-top: var(--text-size-extra-large-baseline-offset) !important; */
+}
+
+.u-textLarge {
+  /* display: inline-block; /* To allow for vertical padding */
   font-size: var(--text-size-large-font-size) !important;
   line-height: var(--text-size-large-line-height) !important;
-  margin-bottom: calc(var(--text-size-large-margin-bottom) - var(--text-size-large-baseline-offset)) !important;
-  padding-top: var(--text-size-large-baseline-offset) !important;
+  /* margin-bottom: calc(var(--text-size-large-margin-bottom) - var(--text-size-large-baseline-offset)) !important;
+  padding-top: var(--text-size-large-baseline-offset) !important; */
 }
 
 .u-textMedium {
-  display: inline-block; /* To allow for vertical padding */
+  /* display: inline-block; /* To allow for vertical padding */
   font-size: var(--text-size-medium-font-size) !important;
   line-height: var(--text-size-medium-line-height) !important;
-  margin-bottom: calc(var(--text-size-medium-margin-bottom) - var(--text-size-medium-baseline-offset)) !important;
-  padding-top: var(--text-size-medium-baseline-offset) !important;
+  /* margin-bottom: calc(var(--text-size-medium-margin-bottom) - var(--text-size-medium-baseline-offset)) !important;
+  padding-top: var(--text-size-medium-baseline-offset) !important; */
 }
 
 /* postcss-bem-linter: ignore */
 small,
 .u-textSmall {
-  display: inline-block; /* To allow for vertical padding */
+  /* display: inline-block; /* To allow for vertical padding */
   font-size: var(--text-size-small-font-size) !important;
   line-height: var(--text-size-small-line-height) !important;
-  margin-bottom: calc(var(--text-size-small-margin-bottom) - var(--text-size-small-baseline-offset)) !important;
-  padding-top: var(--text-size-small-baseline-offset) !important;
+  /* margin-bottom: calc(var(--text-size-small-margin-bottom) - var(--text-size-small-baseline-offset)) !important;
+  padding-top: var(--text-size-small-baseline-offset) !important; */
+}
+
+.u-textExtraSmall {
+  font-size: var(--text-size-extra-small-font-size) !important;
+  line-height: var(--text-size-extra-small-line-height) !important;
 }

@@ -1,0 +1,28 @@
+:root {
+  --root-font-size: 75%;
+  --body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --body-font-size: 1.4166666666666667rem; /* ~17px (1.25^0 @17) */
+  --body-line-height: 2rem; /* ~1.4118 */
+  --h1-font-size: 3.4586588541666665rem; /* ~42px (1.25^4 @17) */
+  --h1-line-height: 4rem; /* ~1.1565 */
+  --h2-font-size: 2.7669270833333335rem; /* ~33px (1.25^3 @17) */
+  --h2-line-height: 3rem; /* ~1.0842 */
+  --h3-font-size: 2.2135416666666665rem; /* ~27px (1.25^2 @17) */
+  --h3-line-height: 3rem; /* ~1.3553 */
+  --h4-font-size: 1.7708333333333333rem; /* ~21px (1.25^1 @17) */
+  --h4-line-height: 2rem; /* ~1.1294 */
+  --h5-font-size: 1.4166666666666667rem; /* ~17px (1.25^0 @17) */
+  --h5-line-height: 2rem; /* ~1.4118 */
+  --h6-font-size: 1.1333333333333335rem; /* ~14px (1.25^-1 @17) */
+  --h6-line-height: 2rem; /* ~1.7647 */
+  --text-size-extra-small-font-size: 0.9066666666666667rem; /* ~11px (1.25^-2 @17) */
+  --text-size-extra-small-line-height: 1.5rem; /* ~1.6544 */
+  --text-size-small-font-size: 1.1333333333333335rem; /* ~14px (1.25^-1 @17) */
+  --text-size-small-line-height: 1.5rem; /* ~1.3235 */
+  --text-size-medium-font-size: 1.4166666666666667rem; /* ~17px (1.25^0 @17) */
+  --text-size-medium-line-height: 2rem; /* ~1.4118 */
+  --text-size-large-font-size: 1.7708333333333333rem; /* ~21px (1.25^1 @17) */
+  --text-size-large-line-height: 2.5rem; /* ~1.4118 */
+  --text-size-extra-large-font-size: 2.2135416666666665rem; /* ~27px (1.25^2 @17) */
+  --text-size-extra-large-line-height: 3rem; /* ~1.3553 */
+}
